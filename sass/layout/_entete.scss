@@ -1,15 +1,19 @@
 /*/////////////////////////// Layout .entete */
 
 .entete {
-    background-color: blanchedalmond;
+    background-color: rgb(250, 227, 250);
+    
     &__contenu {
       display: flex;
       justify-content: space-between;
+      padding: 1rem;
     }
     &__logo {
       width: 75px;
       height: 75px;
+      cursor: pointer;
     }
+
     /*  /////////////////////// Navigation */
     &__nav {
       margin: 0 2rem 0 auto;
@@ -25,9 +29,14 @@
   
       a {
         display: block;
-        background-color: beige;
+        color: inherit;
+        padding: .5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        
         &:hover {
-          background-color: rgb(233, 227, 177);
+          color: rgb(252, 5, 182);
+          border-radius: 10px;
         }
       }
     }

@@ -16,6 +16,7 @@ Text Domain: club-voyage
 /* variables */
 /* Base */
 /* Layout */
+/*/////////////////////////// Layout .general */
 html {
   box-sizing: border-box;
 }
@@ -24,14 +25,19 @@ html {
   box-sizing: inherit;
 }
 
-* {
-  border: 1px solid #ccc;
+* + :is(h1, h2, h3, h4, h5, h6, p, q) {
+  margin-top: 20px;
+}
+
+section:not(:first-of-type) {
+  margin-top: 80px;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.5px;
   margin: 0;
   padding: 0;
 }
@@ -46,16 +52,18 @@ body {
 
 /*/////////////////////////// Layout .entete */
 .entete {
-  background-color: blanchedalmond;
+  background-color: rgb(250, 227, 250);
   /*  /////////////////////// Navigation */
 }
 .entete__contenu {
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
 }
 .entete__logo {
   width: 75px;
   height: 75px;
+  cursor: pointer;
 }
 .entete__nav {
   margin: 0 2rem 0 auto;
@@ -67,35 +75,124 @@ body {
 }
 .entete__menu-item a {
   display: block;
-  background-color: beige;
+  color: inherit;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .entete__menu-item a:hover {
-  background-color: rgb(233, 227, 177);
+  color: rgb(252, 5, 182);
+  border-radius: 10px;
 }
 
+/*/////////////////////////// Layout .hero */
 .hero {
   background-image: url("images/acores.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
+  max-height: 650px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
 }
+.hero__contenu {
+  padding: 1rem;
+  max-width: 80ch;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.hero__titre {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+.hero__description {
+  letter-spacing: 0.2px;
+  /*    margin-bottom: 30px; */
+}
+.hero__slogan {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  background-color: rgba(240, 248, 255, 0.685);
+  padding: 5px;
+  border-radius: 8px;
+  color: rgb(45, 2, 81);
+}
+.hero__bouton {
+  background-color: #fc05b6;
+  max-width: 27ch;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 40px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+}
+.hero__bouton:hover {
+  background-color: #fff;
+  color: #fc05b6;
+  border: 3px solid #fc05b6;
+}
+
+/*/////////////////////////// Layout .galerie */
+.galerie {
+  max-width: 89%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.galerie__contenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.galerie__images {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 10px;
+}
+.galerie__images img {
+  object-fit: cover;
+  max-width: 350px;
+  border: 3px solid #403f3f;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*/////////////////////////// Layout .piedpage */
+.piedpage__droit-auteur {
+  background-color: rgb(236, 197, 236);
+  font-size: 13px;
+  text-align: center;
+  padding: 10px;
+}
+
 /* //////////////////////// Composants */
 /*
 /////////////// composant.recherche
 */
 .recherche {
-  border: 1px solid #aaa;
   display: flex;
   align-items: center;
+  padding: 1rem;
 }
 .recherche__input {
+  border: 1px solid #aaa;
   border: none;
   outline: none;
+  min-height: 5ch;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 14px;
 }
 .recherche__bouton {
-  border-left: 1px solid #aaa;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: rgb(236, 197, 236);
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

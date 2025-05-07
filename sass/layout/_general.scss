@@ -1,27 +1,34 @@
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+/*/////////////////////////// Layout .general */
 
-*{
-    border: 1px solid #ccc;
+html {
+  box-sizing: border-box;
+
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+* +:is(h1, h2, h3, h4, h5, h6, p, q ){
+  margin-top: 20px;
+}
+section:not(:first-of-type){
+  margin-top: 80px;
+  
 }
 
 body{
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: .5px;
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .global{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    max-width: 900px;
-    margin: 0 auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 auto;
 }

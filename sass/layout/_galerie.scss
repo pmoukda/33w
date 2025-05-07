@@ -1,0 +1,32 @@
+/*/////////////////////////// Layout .galerie */
+
+.galerie{
+    max-width: 89% ;
+    margin-left: auto;
+    margin-right: auto;
+    &__contenu{
+        display: flex;flex-direction: column;
+        justify-content: center;
+        
+       
+    }
+
+    &__titre{
+
+    }
+    &__images{
+        display: flex;
+        flex-wrap: wrap; 
+        max-width: 100%;
+        gap: 10px;
+
+        & img{
+            object-fit: cover;
+            max-width: 350px; 
+            border: 3px solid #403f3f;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
