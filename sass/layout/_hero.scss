@@ -1,7 +1,7 @@
 /*/////////////////////////// Layout .hero */
 
 .hero{
-    background-image: url("images/acores.jpg");
+    background-image: url("images/riziere.jpg");
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -11,37 +11,41 @@
     flex-direction: column;
     justify-content: space-around;
     position: relative;
-
-
+    
+    
     &__contenu{
         padding: 1rem;
         max-width: 80ch;
         position: absolute;
         top: 50px;
         left: 50px;
+        background-color: #00000076; 
+        border-radius: 40px;
+        color: #fff;   
     }
-
+    
     &__titre{
-       font-size: 40px;
-       margin-bottom: 0;
+        font-size: 40px;
+        margin-bottom: 0;
+        
     }
-
+    
     &__description{
         letter-spacing: 0.2px;
-     /*    margin-bottom: 30px; */
+        margin-bottom: 30px; 
     }
-
+    
     &__slogan{
         font-size: 18px;
         font-style: italic ;
         font-weight: bold;
-        background-color: rgba(240, 248, 255, 0.685);
-        padding: 5px;
+        background-color: rgba(240, 248, 255, 0.685);  
+        padding: 5px 8px;
         border-radius: 8px;
         color: rgb(45, 2, 81);
-
+        
     }
-
+    
     &__bouton{
         background-color: #fc05b6 ;
         max-width: 27ch;
@@ -52,11 +56,10 @@
         color: #fff;
         cursor: pointer;
         font-size: 17px;
-
+        
         &:hover{
             background-color: #fff;//#3acb8d;
             color: #fc05b6;
-            border: 3px solid #fc05b6;
         }
     }
 }

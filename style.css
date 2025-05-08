@@ -52,7 +52,7 @@ body {
 
 /*/////////////////////////// Layout .entete */
 .entete {
-  background-color: rgb(250, 227, 250);
+  background-color: rgba(143, 226, 190, 0.6039215686);
   /*  /////////////////////// Navigation */
 }
 .entete__contenu {
@@ -87,7 +87,7 @@ body {
 
 /*/////////////////////////// Layout .hero */
 .hero {
-  background-image: url("images/acores.jpg");
+  background-image: url("images/riziere.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -104,6 +104,9 @@ body {
   position: absolute;
   top: 50px;
   left: 50px;
+  background-color: rgba(0, 0, 0, 0.462745098);
+  border-radius: 40px;
+  color: #fff;
 }
 .hero__titre {
   font-size: 40px;
@@ -111,14 +114,14 @@ body {
 }
 .hero__description {
   letter-spacing: 0.2px;
-  /*    margin-bottom: 30px; */
+  margin-bottom: 30px;
 }
 .hero__slogan {
   font-size: 18px;
   font-style: italic;
   font-weight: bold;
   background-color: rgba(240, 248, 255, 0.685);
-  padding: 5px;
+  padding: 5px 8px;
   border-radius: 8px;
   color: rgb(45, 2, 81);
 }
@@ -136,29 +139,25 @@ body {
 .hero__bouton:hover {
   background-color: #fff;
   color: #fc05b6;
-  border: 3px solid #fc05b6;
 }
 
 /*/////////////////////////// Layout .galerie */
 .galerie {
-  max-width: 89%;
+  max-width: 92%;
   margin-left: auto;
   margin-right: auto;
-}
-.galerie__contenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .galerie__images {
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
   gap: 10px;
+  opacity: 0.9;
 }
 .galerie__images img {
   object-fit: cover;
   max-width: 350px;
+  min-height: 250px;
   border: 3px solid #403f3f;
   border-radius: 5px;
   cursor: pointer;
@@ -166,10 +165,11 @@ body {
 
 /*/////////////////////////// Layout .piedpage */
 .piedpage__droit-auteur {
-  background-color: rgb(236, 197, 236);
+  background-color: rgb(5, 0, 3);
   font-size: 13px;
   text-align: center;
   padding: 10px;
+  color: #fff;
 }
 
 /* //////////////////////// Composants */
@@ -182,8 +182,8 @@ body {
   padding: 1rem;
 }
 .recherche__input {
-  border: 1px solid #aaa;
   border: none;
+  border-radius: 8px 0 0 8px;
   outline: none;
   min-height: 5ch;
   padding-left: 1rem;
@@ -192,7 +192,7 @@ body {
 }
 .recherche__bouton {
   border: none;
-  border-radius: 0 5px 5px 0;
-  background-color: rgb(236, 197, 236);
+  border-radius: 0 8px 8px 0;
+  background-color: rgb(252, 5, 182);
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
