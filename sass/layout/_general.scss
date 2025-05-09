@@ -4,6 +4,9 @@ html {
   box-sizing: border-box;
 
 }
+*{
+  border: 1px solid #aaa;
+}
 *, *:before, *:after {
   box-sizing: inherit;
 }

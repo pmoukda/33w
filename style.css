@@ -13,12 +13,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: club-voyage
 */
 /* Importation des feuilles de style du thème */
-/* variables */
+/*////////////////////////// variables */
 /* Base */
 /* Layout */
 /*/////////////////////////// Layout .general */
 html {
   box-sizing: border-box;
+}
+
+* {
+  border: 1px solid #aaa;
 }
 
 *, *:before, *:after {
@@ -51,6 +55,18 @@ body {
 }
 
 /*/////////////////////////// Layout .entete */
+.chk__menu {
+  display: none;
+}
+
+.chk__menu:checked ~ .entete__nav {
+  display: flex;
+  flex-direction: column;
+}
+.chk__menu:checked ~ .entete__nav .entete__menu {
+  flex-direction: column;
+}
+
 .entete {
   background-color: rgba(143, 226, 190, 0.6039215686);
   /*  /////////////////////// Navigation */
@@ -58,7 +74,6 @@ body {
 .entete__contenu {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
 }
 .entete__logo {
   width: 75px;
@@ -66,7 +81,26 @@ body {
   cursor: pointer;
 }
 .entete__nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   margin: 0 2rem 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .entete__nav {
+    display: none;
+  }
+}
+.entete__burger {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .entete__burger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 .entete__menu {
   display: flex;
