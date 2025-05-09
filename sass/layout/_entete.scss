@@ -2,6 +2,7 @@
 .chk__menu{
   display: none;
 }
+
 .chk__menu:checked ~ .entete__nav{
   display: flex;
   flex-direction: column;
@@ -19,6 +20,7 @@
     justify-content: space-between ;
    
   }
+
   &__logo {
     width: 75px;
     height: 75px;
@@ -35,6 +37,7 @@
       display: none;
     }
   }
+
   &__burger{
     display: none;
     @media screen and (max-width: $point-rupture) {
@@ -44,12 +47,14 @@
     right: 0;
     }
   }
+
   &__menu {
     // ul
     display: flex;
     list-style-type: none;
     gap: 1rem;
   }
+
   &__menu-item {
     //li
     
