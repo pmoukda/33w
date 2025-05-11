@@ -6,21 +6,21 @@
 .chk__menu:checked ~ .entete__nav{
   display: flex;
   flex-direction: column;
-
+  
   & .entete__menu{
     flex-direction: column;
   }
-
+  
 }
 .entete {
-  background-color: #8fe2be9a;
+  background-color:black;
   
   &__contenu {
     display: flex;
-    justify-content: space-between ;
-   
+    justify-content: space-between;
+    padding-left: 3rem;
   }
-
+  
   &__logo {
     width: 75px;
     height: 75px;
@@ -31,39 +31,50 @@
   &__nav {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     flex-wrap: wrap;
     margin: 0 2rem 0 auto;
-    @media screen and (max-width: $point-rupture) {
+    @media screen and (max-width: $point-rupture){
       display: none;
-    }
+      margin: 2rem 3rem 0 0;
+      margin-right: auto;
+      margin-left: auto; 
+    } 
   }
-
+  
   &__burger{
     display: none;
     @media screen and (max-width: $point-rupture) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
+      display: block;
+      position: absolute;
+      top:10px;
+      right: 10px;
     }
   }
-
+  
   &__menu {
     // ul
     display: flex;
     list-style-type: none;
     gap: 1rem;
+    @media screen and (max-width: $point-rupture){
+      justify-content:center;
+      align-items: center;
+      padding-right: 40px; 
+      padding-left: 0;
+    } 
   }
-
+  
   &__menu-item {
     //li
     
     a {
       display: block;
-      color: inherit;
+      color: #fff;
       padding: .5rem;
       text-decoration: none;
       text-transform: uppercase;
+      
       
       &:hover {
         color: rgb(252, 5, 182);

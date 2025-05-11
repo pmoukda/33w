@@ -22,7 +22,7 @@ html {
 }
 
 * {
-  border: 1px solid #aaa;
+  /*    border: 1px solid #aaa;  */
 }
 
 *, *:before, *:after {
@@ -68,12 +68,13 @@ body {
 }
 
 .entete {
-  background-color: rgba(143, 226, 190, 0.6039215686);
+  background-color: black;
   /*  /////////////////////// Navigation */
 }
 .entete__contenu {
   display: flex;
   justify-content: space-between;
+  padding-left: 3rem;
 }
 .entete__logo {
   width: 75px;
@@ -83,23 +84,27 @@ body {
 .entete__nav {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   flex-wrap: wrap;
   margin: 0 2rem 0 auto;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 712px) {
   .entete__nav {
     display: none;
+    margin: 2rem 3rem 0 0;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 .entete__burger {
   display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 712px) {
   .entete__burger {
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
   }
 }
 .entete__menu {
@@ -107,9 +112,17 @@ body {
   list-style-type: none;
   gap: 1rem;
 }
+@media screen and (max-width: 712px) {
+  .entete__menu {
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+    padding-left: 0;
+  }
+}
 .entete__menu-item a {
   display: block;
-  color: inherit;
+  color: #fff;
   padding: 0.5rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -138,13 +151,15 @@ body {
   position: absolute;
   top: 50px;
   left: 50px;
-  background-color: rgba(0, 0, 0, 0.462745098);
-  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.5058823529);
+  border-radius: 25px;
   color: #fff;
+  margin-bottom: 30px;
 }
 .hero__titre {
   font-size: 40px;
   margin-bottom: 0;
+  margin-top: 0;
 }
 .hero__description {
   letter-spacing: 0.2px;
@@ -169,6 +184,7 @@ body {
   color: #fff;
   cursor: pointer;
   font-size: 17px;
+  box-shadow: 3px 3px 8px rgb(69, 68, 68);
 }
 .hero__bouton:hover {
   background-color: #fff;
@@ -177,7 +193,7 @@ body {
 
 /*/////////////////////////// Layout .galerie */
 .galerie {
-  max-width: 92%;
+  max-width: 93%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -189,12 +205,24 @@ body {
   opacity: 0.9;
 }
 .galerie__images img {
+  aspect-ratio: 4/3;
   object-fit: cover;
   max-width: 350px;
-  min-height: 250px;
   border: 3px solid #403f3f;
   border-radius: 5px;
   cursor: pointer;
+}
+@media screen and (max-width: 1014px) {
+  .galerie__images img {
+    aspect-ratio: 3/2;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 677px) {
+  .galerie__images img {
+    aspect-ratio: 2/1;
+    max-width: 100%;
+  }
 }
 
 /*/////////////////////////// Layout .piedpage */
@@ -204,6 +232,45 @@ body {
   text-align: center;
   padding: 10px;
   color: #fff;
+  margin: 0;
+}
+
+.infolettre {
+  max-width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+}
+.infolettre__titre {
+  text-align: center;
+  font-style: italic;
+  font-family: "Montserrat";
+}
+.infolettre__formulaire {
+  border-radius: 8px;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: rgba(143, 226, 190, 0.6039215686);
+}
+.infolettre__fieldset {
+  border: 1px solid black;
+}
+.infolettre__legend {
+  font-size: 17px;
+}
+.infolettre__input {
+  outline: 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+}
+.infolettre__bouton {
+  padding: 5px 20px;
+  border: none;
+  margin-left: 20px;
 }
 
 /* //////////////////////// Composants */
@@ -222,11 +289,24 @@ body {
   min-height: 5ch;
   padding-left: 1rem;
   padding-right: 1rem;
-  font-size: 14px;
+  font-size: 12px;
+}
+@media screen and (max-width: 712px) {
+  .recherche__input {
+    display: none;
+  }
+}
+.recherche__input::placeholder {
+  font-size: 15px;
 }
 .recherche__bouton {
   border: none;
   border-radius: 0 8px 8px 0;
   background-color: rgb(252, 5, 182);
   cursor: pointer;
+}
+@media screen and (max-width: 712px) {
+  .recherche__bouton {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

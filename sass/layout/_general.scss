@@ -2,20 +2,22 @@
 
 html {
   box-sizing: border-box;
+}
 
-}
 *{
-  border: 1px solid #aaa;
+/*    border: 1px solid #aaa;  */
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
-* +:is(h1, h2, h3, h4, h5, h6, p, q ){
+
+* +:is(h1, h2, h3, h4, h5, h6, p, q){
   margin-top: 20px;
 }
+
 section:not(:first-of-type){
   margin-top: 80px;
-  
 }
 
 body{

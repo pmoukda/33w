@@ -14,7 +14,15 @@
       min-height: 5ch;
       padding-left: 1rem;
       padding-right: 1rem;
-      font-size: 14px;
+      font-size: 12px;
+      @media screen and (max-width: $point-rupture){
+         display: none;
+      } 
+      &::placeholder{
+         font-size: 15px;
+      }
+
+  
    }
 
    &__bouton{
@@ -22,5 +30,8 @@
       border-radius: 0 8px 8px  0;
       background-color: rgb(252, 5, 182);
       cursor: pointer;
+      @media screen and (max-width: $point-rupture){
+        display: none;
+      } 
    } 
 }

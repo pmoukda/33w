@@ -12,22 +12,22 @@
     justify-content: space-around;
     position: relative;
     
-    
     &__contenu{
         padding: 1rem;
         max-width: 80ch;
         position: absolute;
         top: 50px;
         left: 50px;
-        background-color: #00000076; 
-        border-radius: 40px;
-        color: #fff;   
+        background-color: #00000081;  
+        border-radius: 25px;
+        color: #fff;
+        margin-bottom: 30px;    
     }
     
     &__titre{
         font-size: 40px;
-        margin-bottom: 0;
-        
+        margin-bottom: 0; 
+        margin-top: 0;  
     }
     
     &__description{
@@ -42,8 +42,7 @@
         background-color: rgba(240, 248, 255, 0.685);  
         padding: 5px 8px;
         border-radius: 8px;
-        color: rgb(45, 2, 81);
-        
+        color: rgb(45, 2, 81); 
     }
     
     &__bouton{
@@ -51,12 +50,13 @@
         max-width: 27ch;
         text-align: center;
         padding: 1rem ;
-        margin-top: 40px;
+        margin-top: 40px; 
         border-radius: 10px;
         color: #fff;
         cursor: pointer;
         font-size: 17px;
-        
+        box-shadow: 3px 3px 8px rgb(69, 68, 68);
+      
         &:hover{
             background-color: #fff;//#3acb8d;
             color: #fc05b6;
