@@ -1,76 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prototype de la page d'acceuil</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="script/checkbox.js"></script>
-</head>
-<body>
-    <header class="entete">
-      <div class="entete__contenu">
-      <img src="images/SVG/logo.svg" alt="logo" class="entete__logo">
-   <label for="chk__menu" class="entete__burger">
-    <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">
-   </label>
-   <input type="checkbox" class="chk__menu" id="chk__menu">
-      <nav class="entete__nav">
-        <ul class="entete__menu">
-            <li class="entete__menu-item"><a href="#">Aventure</a></li>
-            <li class="entete__menu-item"><a href="#">Culturel</a></li>
-            <li class="entete__menu-item"><a href="#">Zen</a></li>
-            <li class="entete__menu-item"><a href="#">Sport</a></li>
-            <li class="entete__menu-item"><a href="#">Croisière</a></li>
-            <li class="entete__menu-item"><a href="#">Repos</a></li>
-        </ul>
-        <form action="" class="recherche">
-          <label for="recherche"></label>
-          <input class="recherche__input" type="search" name="recherche" id="recherche" placeholder="Recherche">
-          <button class="recherche__bouton">
-            <img src="https://s2.svgbox.net/hero-solid.svg?ic=search&color=000" width="32"  height="32">
-          </button>
-        </form>
-      </nav>
-    </div>
-    </header>
-    <section class="hero">
-        <div class="hero__contenu">
-            <h1 class="hero__titre">Club de voyage</h1>
-            <p class="hero__description">Envie de dépaysement, d’aventure ou simplement de faire une pause loin du quotidien ?
-              Chez Paradise, nous imaginons pour vous des voyages sur mesure, authentiques et inoubliables. Que ce soit pour un week-end en Europe, un safari en Afrique ou une escapade en amoureux sous les tropiques, notre équipe est à votre écoute pour créer le séjour qui vous ressemble.
-            </p>
-            <q class="hero__slogan">Des destinations de rêve, des souvenirs pour la vie.</q>
-            <div class="hero__bouton">Découvrir nos destinations</div>
-        </div>
-    </section>
-    <section class="galerie">
-        <h2 class="galerie__titre">Nos destinations populaires</h2>
-        <div class="galerie__images">
-          <img src="images/borabora.jpg" alt="bora bora">
-          <img src="images/hawai.jpg" alt="hawai">
-          <img src="images/maldives.jpg" alt="maldives">
-          <img src="images/bahamas.jpg" alt="bahamas">
-          <img src="images/italie.jpg" alt="italie">
-          <img src="images/canada.jpg" alt="canada">
-          <img src="images/grece.jpg" alt="grece">
-          <img src="images/thailande.jpg" alt="thailande">
-          <img src="images/mexique.jpg" alt="mexique">
-          <img src="images/san-fransisco.jpg" alt="san fransisco">
-        </div>
-    </section>
-    <section class="populaire">
-
-    </section>
-    <footer class="piedpage">
-      <p class="piedpage__droit-auteur"> Moukda Phaengvixay &copy 2025. Tous droits réservés</p>
-    </footer>
-</body>
-</html>
+<?php get_header(); ?>
+  <section class="hero">
+      <div class="hero__contenu">
+          <h1 class="hero__titre">Club de voyage</h1>
+          <p class="hero__description">Envie de dépaysement, d’aventure ou simplement de faire une pause loin du quotidien ?
+            Chez <strong>Paradise</strong>, nous imaginons pour vous des voyages sur mesure, authentiques et inoubliables. Que ce soit pour un week-end en Europe, un safari en Afrique ou une escapade en amoureux sous les tropiques, notre équipe est à votre écoute pour créer le séjour qui vous ressemble.
+          </p>
+          <q class="hero__slogan">Des destinations de rêve, des souvenirs pour la vie.</q>
+          <div class="hero__bouton">Découvrir nos destinations</div>
+      </div>
+  </section>
+    <section class="infolettre">
+    <h2 class="infolettre__titre">Abonnez-vous à notre infolettre pour recevoir des exclusivités!</h2>
+    <form action="" class="infolettre__formulaire">
+      <fieldset class="infolettre__fieldset">
+        <legend class="infolettre__legend">Nom</legend>
+        <label for="Nom">
+        <input class="infolettre__input" type="text" id="nom" name="nom" placeholder="Votre nom">
+        </label>
+        </fieldset>
+      <fieldset class="infolettre__fieldset">
+        <legend class="infolettre__legend">Prénom</legend>
+          <label for="prenom">
+          <input class="infolettre__input" type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+          </label>
+      </fieldset>
+      <fieldset class="infolettre__fieldset">
+        <legend class="infolettre__legend">Courriel</legend>
+        <label for="courriel">
+        <input class="infolettre__input" type="text" id="courriel" name="courriel" placeholder="Votre courriel">
+        </label>
+      </fieldset>
+      <fieldset class="infolettre__fieldset">
+        <legend class="infolettre__legend">Téléphone</legend>
+        <label for="telephone">
+        <input class="infolettre__input" type="text" id="telephone" name="telephone" placeholder="Votre téléphone">
+        </label>
+      </fieldset>
+      <input class="infolettre__bouton hero__bouton" type="submit" value="S'inscrire">
+    </form>
+  </section>
+  <section class="galerie">
+      <h2 class="galerie__titre">Nos destinations populaires</h2>
+      <div class="galerie__images">
+        <img src="images/borabora.jpg" alt="bora bora">
+        <img src="images/hawai.jpg" alt="hawai">
+        <img src="images/maldives.jpg" alt="maldives">
+        <img src="images/bahamas.jpg" alt="bahamas">
+        <img src="images/italie.jpg" alt="italie">
+        <img src="images/canada.jpg" alt="canada">
+        <img src="images/grece.jpg" alt="grece">
+        <img src="images/thailande.jpg" alt="thailande">
+        <img src="images/mexique.jpg" alt="mexique">
+        <img src="images/san-fransisco.jpg" alt="san fransisco">
+      </div>
+  </section>
+  <section class="populaire">
+    <?php if(have_posts()){
+      while(have_posts()){
+      the_post(); ?>
+      <h1><?php the_title();?>
+      <?php the_content();
+      }
+    }  ?>
+  </section>
+  
+<?php get_footer(); 
