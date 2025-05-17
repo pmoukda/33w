@@ -16,17 +16,17 @@
 <body>
     <header class="entete">
       <div class="entete__contenu">
-  <!--     <img src="images/SVG/logo.svg" alt="logo" class="entete__logo"> -->
-      <figure class="entete_logo">
-        <?php  echo get_custom_logo() ?>
-      </figure>
-   <label for="chk__menu" class="entete__burger">
-    <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">
-   </label>
+<!--  <img src="images/SVG/logo.svg" alt="logo" class="entete__logo">  -->
+        <figure class="entete_logo">
+          <?php  echo get_custom_logo() ?>
+        </figure> 
+      <label for="chk__menu" class="entete__burger">
+        <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=fff" width="32" height="32">
+      </label>
 
-   <input type="checkbox" class="chk__menu" id="chk__menu">
+      <input type="checkbox" class="chk__menu" id="chk__menu">
       <nav class="entete__nav">
-  <!--       <ul class="entete__menu">
+  <!--  <ul class="entete__menu">
             <li class="entete__menu-item"><a href="#">Aventure</a></li>
             <li class="entete__menu-item"><a href="#">Culturel</a></li>
             <li class="entete__menu-item"><a href="#">Zen</a></li>
@@ -38,7 +38,7 @@
           "menu" => "principal",
           'container'            => '',
           'container_class'      => '',
-          'menu_class'           => 'entete_menu',
+          'menu_class'           => 'entete__menu',
         )); ?>
 
         <form action="" class="recherche">

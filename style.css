@@ -68,7 +68,7 @@ body {
 }
 
 .entete {
-  background-color: black;
+  background-color: rgb(5, 5, 5);
   /*  /////////////////////// Navigation */
 }
 .entete__contenu {
@@ -130,6 +130,14 @@ body {
 .entete__menu-item a:hover {
   color: rgb(252, 5, 182);
   border-radius: 10px;
+}
+
+#menu-principal a {
+  display: block;
+  color: #fff;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 /*/////////////////////////// Layout .hero */
@@ -226,13 +234,83 @@ body {
 }
 
 /*/////////////////////////// Layout .piedpage */
+.piedpage {
+  background-color: rgb(5, 5, 5);
+  margin-top: 50px;
+  font-size: 14px;
+  padding: 20px;
+}
+.piedpage__nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 2rem 0 auto;
+}
+@media screen and (max-width: 712px) {
+  .piedpage__nav {
+    flex-direction: column;
+  }
+}
+.piedpage__titre {
+  color: white;
+}
+.piedpage__menu {
+  list-style-type: none;
+  padding: 0;
+}
+.piedpage__menu-item a {
+  display: block;
+  color: #fff;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+.piedpage__menu-item a:hover {
+  color: rgb(252, 5, 182);
+  border-radius: 10px;
+}
+.piedpage__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+@media screen and (max-width: 712px) {
+  .piedpage__contact {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.piedpage__coordonnes {
+  color: #fff;
+}
+.piedpage__coordonnes a {
+  color: rgb(252, 5, 182);
+}
+@media screen and (max-width: 712px) {
+  .piedpage__coordonnes {
+    line-height: 1;
+  }
+}
+.piedpage__medias {
+  padding-left: 50px;
+}
+.piedpage__medias img {
+  max-width: 30px;
+  padding: 3px;
+  cursor: pointer;
+}
 .piedpage__droit-auteur {
-  background-color: rgb(5, 0, 3);
-  font-size: 13px;
+  font-size: 11px;
   text-align: center;
-  padding: 10px;
+  padding: 15px 50px 0 50px;
   color: #fff;
   margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.4745098039);
+  max-width: 75%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .infolettre {

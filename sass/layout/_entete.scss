@@ -13,7 +13,7 @@
   
 }
 .entete {
-  background-color:black;
+  background-color:rgb(5, 5, 5);
   
   &__contenu {
     display: flex;
@@ -52,7 +52,7 @@
     }
   }
   
-  &__menu {
+  &__menu{
     // ul
     display: flex;
     list-style-type: none;
@@ -81,5 +81,14 @@
         border-radius: 10px;
       }
     }
+  }
+}
+#menu-principal{
+  & a{
+       display: block;
+      color: #fff;
+      padding: .5rem;
+      text-decoration: none;
+      text-transform: uppercase;
   }
 }

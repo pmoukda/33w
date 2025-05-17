@@ -57,11 +57,12 @@
   <section class="populaire">
     <?php if(have_posts()){
       while(have_posts()){
-      the_post(); ?>
-      <h1><?php the_title();?>
-      <?php the_content();
+        the_post(); ?>
+        <h1><?php the_title();?>
+        <?php the_content();
       }
-    }  ?>
+    }  
+    ?>
   </section>
   
 <?php get_footer(); 
