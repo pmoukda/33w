@@ -17,7 +17,7 @@
     <header class="entete">
       <div class="entete__contenu">
 <!--  <img src="images/SVG/logo.svg" alt="logo" class="entete__logo">  -->
-        <figure class="entete_logo">
+        <figure class="entete__logo">
           <?php  echo get_custom_logo() ?>
         </figure> 
       <label for="chk__menu" class="entete__burger">
@@ -45,7 +45,7 @@
           <label for="recherche"></label>
           <input class="recherche__input" type="search" name="recherche" id="recherche" placeholder="Recherche">
           <button class="recherche__bouton">
-            <img src="https://s2.svgbox.net/hero-solid.svg?ic=search&color=000" width="32"  height="32">
+            <img src="https://s2.svgbox.net/hero-solid.svg?ic=search&color=000" width="30"  height="30">
           </button>
         </form>
       </nav>

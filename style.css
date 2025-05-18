@@ -22,7 +22,7 @@ html {
 }
 
 * {
-  /*   border: 1px solid #aaa;   */
+  /*  border: 1px solid #aaa;   */
 }
 
 *, *:before, *:after {
@@ -81,6 +81,10 @@ body {
   height: 75px;
   cursor: pointer;
 }
+.entete__logo a img {
+  width: 100px;
+  height: 75px;
+}
 .entete__nav {
   display: flex;
   justify-content: flex-end;
@@ -88,7 +92,7 @@ body {
   flex-wrap: wrap;
   margin: 0 2rem 0 auto;
 }
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 845px) {
   .entete__nav {
     display: none;
     margin: 2rem 3rem 0 0;
@@ -99,26 +103,38 @@ body {
 .entete__burger {
   display: none;
 }
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 845px) {
   .entete__burger {
     display: block;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
   }
 }
 .entete__menu {
   display: flex;
   list-style-type: none;
   gap: 1rem;
+  padding-right: 40px;
 }
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 845px) {
   .entete__menu {
     justify-content: center;
     align-items: center;
     padding-right: 40px;
     padding-left: 0;
   }
+}
+.entete__menu a {
+  color: #fff;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.entete__menu a:hover {
+  color: rgb(252, 5, 182);
+  border-radius: 10px;
 }
 .entete__menu-item a {
   display: block;
@@ -130,14 +146,6 @@ body {
 .entete__menu-item a:hover {
   color: rgb(252, 5, 182);
   border-radius: 10px;
-}
-
-#menu-principal a {
-  display: block;
-  color: #fff;
-  padding: 0.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 /*/////////////////////////// Layout .hero */
@@ -159,10 +167,11 @@ body {
   position: absolute;
   top: 50px;
   left: 50px;
-  background-color: rgba(0, 0, 0, 0.5058823529);
+  background: linear-gradient(to bottom, rgb(243, 195, 123), rgba(194, 227, 84, 0.788), rgba(220, 220, 154, 0));
   border-radius: 25px;
-  color: #fff;
+  color: #000;
   margin-bottom: 30px;
+  padding: 20px;
 }
 .hero__titre {
   font-size: 40px;
@@ -177,10 +186,9 @@ body {
   font-size: 18px;
   font-style: italic;
   font-weight: bold;
-  background-color: rgba(240, 248, 255, 0.685);
+  background-color: rgba(194, 227, 84, 0.937254902);
   padding: 5px 8px;
   border-radius: 8px;
-  color: rgb(45, 2, 81);
 }
 .hero__bouton {
   background-color: #fc05b6;
@@ -201,16 +209,17 @@ body {
 
 /*/////////////////////////// Layout .galerie */
 .galerie {
-  max-width: 93%;
+  max-width: 91%;
+  align-self: center;
   margin-left: auto;
   margin-right: auto;
+  padding: 20px;
 }
 .galerie__images {
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
   gap: 10px;
-  opacity: 0.9;
 }
 .galerie__images img {
   aspect-ratio: 4/3;
@@ -247,13 +256,16 @@ body {
   flex-wrap: wrap;
   margin: 0 2rem 0 auto;
 }
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 845px) {
   .piedpage__nav {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .piedpage__titre {
   color: white;
+  padding: 8px;
 }
 .piedpage__menu {
   list-style-type: none;
@@ -276,7 +288,7 @@ body {
   gap: 40px;
   padding: 20px;
 }
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 845px) {
   .piedpage__contact {
     flex-direction: column;
     gap: 10px;
@@ -288,7 +300,7 @@ body {
 .piedpage__coordonnes a {
   color: rgb(252, 5, 182);
 }
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 845px) {
   .piedpage__coordonnes {
     line-height: 1;
   }
@@ -365,11 +377,10 @@ body {
   border-radius: 8px 0 0 8px;
   outline: none;
   min-height: 5ch;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0 1rem 0 1rem;
   font-size: 12px;
 }
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 845px) {
   .recherche__input {
     display: none;
   }
@@ -382,8 +393,9 @@ body {
   border-radius: 0 8px 8px 0;
   background-color: rgb(252, 5, 182);
   cursor: pointer;
+  padding: 0px 2px 0px 2px;
 }
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 845px) {
   .recherche__bouton {
     display: none;
   }

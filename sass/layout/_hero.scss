@@ -18,10 +18,11 @@
         position: absolute;
         top: 50px;
         left: 50px;
-        background-color: #00000081;  
+        background:linear-gradient(to bottom, rgb(243, 195, 123), rgba(194, 227, 84, 0.788), rgba(220, 220, 154, 0)) ;
         border-radius: 25px;
-        color: #fff;
-        margin-bottom: 30px;    
+        color: #000;
+        margin-bottom: 30px; 
+        padding: 20px ;   
     }
     
     &__titre{
@@ -39,10 +40,9 @@
         font-size: 18px;
         font-style: italic ;
         font-weight: bold;
-        background-color: rgba(240, 248, 255, 0.685);  
+        background-color: #c2e354ef;  
         padding: 5px 8px;
         border-radius: 8px;
-        color: rgb(45, 2, 81); 
     }
     
     &__bouton{
