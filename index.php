@@ -40,7 +40,7 @@
     </form>
   </section>
   <section class="galerie">
-      <h2 class="galerie__titre">Nos destinations populaires</h2>
+      <h2 class="galerie__titre">Galerie</h2>
       <div class="galerie__images">
         <img src="images/borabora.jpg" alt="bora bora">
         <img src="images/hawai.jpg" alt="hawai">
