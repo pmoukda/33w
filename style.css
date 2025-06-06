@@ -399,4 +399,41 @@ body {
   .recherche__bouton {
     display: none;
   }
+}
+
+/*
+/////////////// composant.recherche
+*/
+.recherche {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.recherche__input {
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  min-height: 5ch;
+  padding: 0 1rem 0 1rem;
+  font-size: 12px;
+}
+@media screen and (max-width: 845px) {
+  .recherche__input {
+    display: none;
+  }
+}
+.recherche__input::placeholder {
+  font-size: 15px;
+}
+.recherche__bouton {
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: rgb(252, 5, 182);
+  cursor: pointer;
+  padding: 0px 2px 0px 2px;
+}
+@media screen and (max-width: 845px) {
+  .recherche__bouton {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

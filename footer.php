@@ -29,7 +29,7 @@
     <div class="piedpage__contact">
         <p class="piedpage__coordonnes">Adresse: 233 rue Sherbrooke, Montréal, Qc</p>
         <p class="piedpage__coordonnes">Téléphone: 514-573-2356</p>
-        <p class="piedpage__coordonnes">Courriel: <a href="#">paradis@voyage.com</a></p>
+        <p class="piedpage__coordonnes">Courriel: <a href="#">paradise@voyage.com</a></p>
         
       <div class="piedpage__medias">
         <p class="piedpage__coordonnes">Suivez-nous</p>

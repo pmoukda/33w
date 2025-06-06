@@ -7,7 +7,7 @@
 ?>
 
 <?php get_header(); ?>
-<h1>Pour déboggage seulement  ------------ index-page.php --------------</h1>
+<h1>Pour déboggage seulement  ------------ category-page.php --------------</h1>
 
   <section class="populaire">
     <?php if(have_posts()){
