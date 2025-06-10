@@ -63,26 +63,35 @@
       </div>
   </section>
   <section class="populaire">
+    <div class=" conteneur global">
     <?php if(have_posts()){
       while(have_posts()){
         // affiche image "mise en avant" miniature
         the_post(); 
-        ?>
-        <?php  
-        the_post_thumbnail('thumbnail'); 
-    
-      // affiche le titre principale de "post" 
-        the_title();
-        ?>
-        <?php 
-        // cette fonction permet d'afficher l'ensemble du contenu du post (article ou page) 
-        //the_content();
-        $lien = "<a href=". get_permalink().">Suite</a>";
+    ?>
+      
+       <?php // cette fonction permet d'afficher l'ensemble du contenu du post (article ou page) 
+        if(in_category('galerie')){
+          echo '<article class="conteneur__galerie">';
+          the_content();
+          echo'</article>';
+        }else{
+         ?><article class="conteneur__carte"> 
+           <?php the_post_thumbnail('thumbnail');?>
+   
+           <h1><?php 
+           // affiche le titre principale de "post" 
+           the_title(); ?></h1>
+
+        <?php $lien = "<a href=". get_permalink().">Suite</a>";
         echo wp_trim_words (get_the_excerpt(),10, $lien);
+        }?></p>
+     </article>
        
-      }
+     <?php }
     }  
     ?>
+    </div>
   </section>
   
 <?php get_footer(); ?>

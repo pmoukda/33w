@@ -1,0 +1,20 @@
+.conteneur {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  
+  &__carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 0 300px;
+    padding: 10px;
+    border: 1px solid #aaa;
+   
+  }
+
+  &__galerie{
+    flex: 1 0 100%;
+  }
+}
