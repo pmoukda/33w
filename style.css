@@ -21,10 +21,6 @@ html {
   box-sizing: border-box;
 }
 
-* {
-  /*  border: 1px solid #aaa;   */
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -70,6 +66,11 @@ section {
   flex-direction: column;
 }
 
+.custom-logo {
+  width: 75px;
+  height: 75px;
+}
+
 .entete {
   background-color: rgb(5, 5, 5);
   /*  /////////////////////// Navigation */
@@ -83,10 +84,6 @@ section {
   width: 75px;
   height: 75px;
   cursor: pointer;
-}
-.entete__logo a img {
-  width: 100px;
-  height: 75px;
 }
 .entete__nav {
   display: flex;
@@ -227,7 +224,7 @@ section {
 .galerie__images img {
   aspect-ratio: 4/3;
   object-fit: cover;
-  max-width: 350px;
+  max-width: 250px;
   border: 3px solid #403f3f;
   border-radius: 5px;
   cursor: pointer;
@@ -328,8 +325,12 @@ section {
   margin-left: auto;
 }
 
+.searchform {
+  justify-self: center;
+}
+
 .infolettre {
-  max-width: 65%;
+  max-width: 55%;
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px;
@@ -417,7 +418,11 @@ section {
   flex: 1 0 300px;
   padding: 10px;
   border: 1px solid #aaa;
+  border-radius: 5px;
 }
 .conteneur__galerie {
   flex: 1 0 100%;
+}
+.conteneur__titre {
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */

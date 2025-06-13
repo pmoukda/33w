@@ -12,6 +12,10 @@
   }
   
 }
+.custom-logo{
+  width: 75px;
+  height: 75px;  
+}
 .entete {
   background-color:rgb(5, 5, 5);
   
@@ -25,13 +29,7 @@
     width: 75px;
     height: 75px;
     cursor: pointer;
-    & a{
-
-      & img{
-        width: 100px;
-        height: 75px;
-      }
-    }
+ 
   }
   
   /*  /////////////////////// Navigation */

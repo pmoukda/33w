@@ -47,23 +47,9 @@
       <input class="infolettre__bouton hero__bouton" type="submit" value="S'inscrire">
     </form>
   </section>
-  <section class="galerie">
-      <h2 class="galerie__titre">Galerie</h2>
-      <div class="galerie__images">
-        <img src="images/borabora.jpg" alt="bora bora">
-        <img src="images/hawai.jpg" alt="hawai">
-        <img src="images/maldives.jpg" alt="maldives">
-        <img src="images/bahamas.jpg" alt="bahamas">
-        <img src="images/italie.jpg" alt="italie">
-        <img src="images/canada.jpg" alt="canada">
-        <img src="images/grece.jpg" alt="grece">
-        <img src="images/thailande.jpg" alt="thailande">
-        <img src="images/mexique.jpg" alt="mexique">
-        <img src="images/san-fransisco.jpg" alt="san fransisco">
-      </div>
-  </section>
-  <section class="populaire">
+  <section class="populaire"> 
     <div class=" conteneur global">
+      <h2 class="conteneur__titre">Galerie</h2>
     <?php 
       if(have_posts())
       {
@@ -84,7 +70,7 @@
       ?>
       <?php 
         } 
-    
+        
       } 
       ?>
     </div>

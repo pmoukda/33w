@@ -1,31 +1,38 @@
 
  <footer class="piedpage">
-       <nav class="piedpage__nav">
-        <div class="piedpage__liens-utiltes">
-            <h3 class="piedpage__titre">Liens Utiles</h3>
-            <ul class="piedpage__menu">
-                <li class="piedpage__menu-item"><a href="#">Témoignages</a></li>
-                <li class="piedpage__menu-item"><a href="#">Destinations populaires</a></li>
-                
-                <li class="piedpage__menu-item"><a href="#">Promotions</a></li>
-            </ul>
-          </div>
-          <div class="piedpage__apropos">
-            <h3 class="piedpage__titre">À propos de nous</h3>
-            <ul class="piedpage__menu">
-                <li class="piedpage__menu-item"><a href="#">À propos</a></li>
-                <li class="piedpage__menu-item"><a href="#">Contactez-nous</a></li>
-            </ul>
-         </div>
-        <div class="piedpage__informations">
-            <h3 class="piedpage__titre">Informations</h3>
-            <ul class="piedpage__menu">
-                <li class="piedpage__menu-item"><a href="#">Termes et Conditions</a></li>
-                <li class="piedpage__menu-item"><a href="#">Devenir membre</a></li>
-                <li class="piedpage__menu-item"><a href="#">FAQ</a></li>
-            </ul>
-        </div>
+
+    <nav class="piedpage__nav">
+      <div class="piedpage__liens-utiltes">
+        <h3 class="piedpage__titre">Liens Utiles</h3>
+        <ul class="piedpage__menu">
+            <li class="piedpage__menu-item"><a href="#">Témoignages</a></li>
+            <li class="piedpage__menu-item"><a href="#">Destinations populaires</a></li>
+            <li class="piedpage__menu-item"><a href="#">Promotions</a></li>
+            <?php wp_nav_menu(array(
+            "menu" => "externe",
+            "container" => "nav"
+            )) ?>
+        </ul>
+      </div>
+      <div class="piedpage__apropos">
+        <h3 class="piedpage__titre">À propos de nous</h3>
+        <ul class="piedpage__menu">
+            <li class="piedpage__menu-item"><a href="#">À propos</a></li>
+            <li class="piedpage__menu-item"><a href="#">Contactez-nous</a></li>
+        </ul>
+      </div>
+      <div class="piedpage__informations">
+        <h3 class="piedpage__titre">Informations</h3>
+        <ul class="piedpage__menu">
+            <li class="piedpage__menu-item"><a href="#">Termes et Conditions</a></li>
+            <li class="piedpage__menu-item"><a href="#">Devenir membre</a></li>
+            <li class="piedpage__menu-item"><a href="#">FAQ</a></li>
+        </ul>
+      </div>
     </nav>
+    <div class="piedpage__recherche">
+       <?php get_search_form();?>
+    </div>
     <div class="piedpage__contact">
         <p class="piedpage__coordonnes">Adresse: 233 rue Sherbrooke, Montréal, Qc</p>
         <p class="piedpage__coordonnes">Téléphone: 514-573-2356</p>
@@ -38,11 +45,14 @@
         " width="32" height="32">
         <img src="https://s2.svgbox.net/social.svg?ic=tiktok&color=fff
         " width="32" height="32">
+        <a class="sociaux" href="https://github.com/pmoukda">
+          <img src="https://s2.svgbox.net/social.svg?ic=github&color=fff" width="32" height="32">
+        </a>
       </div>
     </div>
       <p class="piedpage__droit-auteur"> Moukda Phaengvixay &copy 2025. Tous droits réservés</p>
     </footer>
- <script src="script/checkbox.js"></script>
+    <script src="script/checkbox.js"></script>
      <?php wp_footer(); ?>
 </body>
 </html> 
