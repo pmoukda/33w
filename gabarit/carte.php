@@ -6,7 +6,7 @@
  */
 ?>
    
-<article class="conteneur__carte">
+   <article class="conteneur__carte">
     <?php the_post_thumbnail('miniature');?>
     
     <h1><?php 

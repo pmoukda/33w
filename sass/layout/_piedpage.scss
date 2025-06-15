@@ -25,6 +25,13 @@
     &__menu{
         list-style-type: none;
         padding: 0;
+
+        & .menu{
+            padding: 10px;
+            & a{
+                color: rgb(252, 5, 182);
+            }
+        }
     }
     &__menu-item{
         
@@ -39,6 +46,17 @@
                 border-radius: 10px;
             }
         }
+    }
+    &__recherche{
+       justify-self: center;
+
+       & .recherche__input{
+        width: 50ch;
+
+           &::placeholder{
+         text-align: center;
+      }
+       }
     }
     
     &__contact{
@@ -87,9 +105,4 @@
         margin-right: auto;
         margin-left: auto;
     }
-}
-
-
-.searchform{
-   justify-self: center;
 }
