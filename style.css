@@ -378,6 +378,21 @@ section {
   margin-left: 0px;
 }
 
+.populaire {
+  padding: 30px;
+  max-width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.populaire img {
+  border-radius: 8px;
+  object-fit: cover;
+  max-width: 100%;
+}
+.populaire p {
+  max-width: 90ch;
+}
+
 /* //////////////////////// Composants */
 /*
 /////////////// composant.recherche

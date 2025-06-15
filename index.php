@@ -17,7 +17,7 @@
         the_post_thumbnail('thumbnail');
         ?>
         <!-- affiche le titre principale de "post" -->
-        <h1><?php the_title();?>
+        <h1><?php the_title();?></h1>
         <!-- cette fonction permet d'afficher l'ensemble du contenenu du post (article ou page) -->
         <?php the_content();
       }
