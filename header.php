@@ -21,7 +21,7 @@
           <?= get_custom_logo(); ?>
         </figure> 
       <label for="chk__menu" class="entete__burger">
-        <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=fff" width="32" height="32">
+        <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=fff" width="32" height="32" alt="icone-menu">
       </label>
 
       <input type="checkbox" class="chk__menu" id="chk__menu">

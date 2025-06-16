@@ -11,6 +11,6 @@
         <input class="recherche__input" type="search" placeholder="Rechercher..." value="<?php echo get_search_query(); ?>" name="s" />
     </label>
     <button class="recherche__bouton" type="submit">
-         <img src="https://s2.svgbox.net/hero-solid.svg?ic=search&color=000" width="30"  height="30">
+         <img src="https://s2.svgbox.net/hero-solid.svg?ic=search&color=000" width="30"  height="30" alt="icone-search">
     </button>
 </form>

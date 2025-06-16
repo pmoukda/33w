@@ -7,7 +7,6 @@
 ?>
 
 <?php get_header(); ?>
-<h1>Pour déboggage seulement  ------------ index-page.php --------------</h1>
 
   <section class="populaire">
    <h1>Erreur 404</h1>

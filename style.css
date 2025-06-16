@@ -254,7 +254,10 @@ section {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 2rem 0 auto;
+  margin-left: 0;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media screen and (max-width: 845px) {
   .piedpage__nav {
@@ -368,7 +371,7 @@ section {
 }
 .infolettre__input {
   outline: 0;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   border: 0;
 }
@@ -376,13 +379,12 @@ section {
   padding: 5px 20px;
   border: none;
   margin-left: 0px;
+  margin-top: 20px;
 }
 
 .populaire {
-  padding: 30px;
-  max-width: 60%;
-  margin-right: auto;
-  margin-left: auto;
+  justify-self: center;
+  margin-top: 50px;
 }
 .populaire img {
   border-radius: 8px;

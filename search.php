@@ -7,7 +7,6 @@
 ?>
 
 <?php get_header(); ?>
-<h1>Pour déboggage seulement  ------------ search.php --------------</h1>
 
   <section class="populaire">
     <?php if(have_posts()){

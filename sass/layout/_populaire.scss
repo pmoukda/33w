@@ -1,18 +1,13 @@
 .populaire{
-    padding: 30px;
-    max-width: 60%;
-    margin-right: auto;
-    margin-left: auto;
+    justify-self: center;
+    margin-top: 50px;
+
     & img{
-        // border: 2px solid black;
         border-radius: 8px;
         object-fit: cover;
         max-width: 100%;
     }
-    & h1{
-        
-    }
-
+  
     & p{
         max-width: 90ch;
     }

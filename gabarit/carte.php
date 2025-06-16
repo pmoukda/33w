@@ -5,7 +5,7 @@
  * Affiche une carte dans un conteneur flex
  */
 ?>
-   
+  
    <article class="conteneur__carte">
     <?php the_post_thumbnail('miniature');?>
     
