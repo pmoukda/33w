@@ -9,6 +9,8 @@
 <?php get_header(); ?>
 
   <section class="populaire">
+    <h2><?php single_cat_title() ?></h2>
+    <?= category_description(); ?>
     <?php if(have_posts()){
       while(have_posts()){
         // affiche image "mise en avant" miniature

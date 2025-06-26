@@ -6,16 +6,10 @@
 ?>
 
 <?php get_header(); ?>
-  <section class="hero">
-      <div class="hero__contenu">
-          <h1 class="hero__titre">Club de voyage</h1>
-          <p class="hero__description">Envie de dépaysement, d’aventure ou simplement de faire une pause loin du quotidien ?
-            Chez <strong>Paradise</strong>, nous imaginons pour vous des voyages sur mesure, authentiques et inoubliables. Que ce soit pour un week-end en Europe, un safari en Afrique ou une escapade en amoureux sous les tropiques, notre équipe est à votre écoute pour créer le séjour qui vous ressemble.
-          </p>
-          <q class="hero__slogan">Des destinations de rêve, des souvenirs pour la vie.</q>
-          <div class="hero__bouton">Découvrir nos destinations</div>
-      </div>
-  </section>
+<!-- section hero -->
+<section class="hero"></section>
+  <?php get_template_part("gabarit/hero"); ?>
+</section>
     <section class="infolettre">
     <h2 class="infolettre__titre">Abonnez-vous à notre infolettre pour recevoir des exclusivités!</h2>
     <form action="" class="infolettre__formulaire">
@@ -46,33 +40,9 @@
       <input class="infolettre__bouton hero__bouton" type="submit" value="S'inscrire">
     </form>
   </section>
+  <!-- section populaire -->
   <section class="populaire"> 
-    <div class=" conteneur global">
-      <h2 class="conteneur__titre">Galerie</h2>
-      <?php
-        if(have_posts())
-        {
-          while(have_posts())
-          {
-            // affiche image "mise en avant" miniature
-            the_post();
-      ?>
-      <?php // cette fonction permet d'afficher l'ensemble du contenu du post (article ou page) 
-          if(in_category('galerie'))
-          {
-           get_template_part("gabarit/galerie");
-          }
-          else
-          {
-            get_template_part("gabarit/carte"); 
-          }
-      ?>
-      <?php 
-        } 
-        
-      } 
-      ?>
-    </div>
+    <?php get_template_part("gabarit/populaire"); ?>
   </section>
   
 <?php get_footer(); ?>
