@@ -1,0 +1,44 @@
+.infolettre{
+    max-width: 55%; 
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+
+    &__titre{
+        text-align: center;
+        font-style: italic;
+        font-family: "Montserrat";
+    }
+    
+    &__formulaire{
+        border-radius: 8px;
+        padding: 20px 10px;
+        display: flex;
+        justify-content:center ;
+        flex-wrap: wrap;
+        gap: 15px;
+        background-color: #8fe2be9a;
+    }
+
+    &__fieldset{
+        border: 1px solid black;
+    }
+
+    &__legend{
+        font-size: 17px;
+    }
+
+    &__input{
+        outline: 0;
+        padding: 5px;
+        border-radius: 5px;
+        border: 0; 
+    }
+
+    &__bouton{
+        padding: 5px 20px;
+        border: none;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+}

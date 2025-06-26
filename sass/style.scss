@@ -14,16 +14,24 @@ Text Domain: club-voyage
 
 /* Importation des feuilles de style du thème */
 
-/* variables */
-@import "variables/couleurs";
+/*////////////////////////// variables */
+@import "variables/dimension";
+//@import "variables/couleurs";
 
 /* Base */
-@import "base/titre";
+//@import "base/titre";
 
 /* Layout */
+@import "layout/general";
 @import "layout/entete";
+@import "layout/hero";
+@import "layout/galerie";
+@import "layout/piedpage";
+@import "layout/infolettre";
+@import "layout/populaire";
 
-/* Composants */
-@import "composants/bouton";
-@import "composants/menu";
-
+/* //////////////////////// Composants */
+@import "composants/recherche";
+@import "composants/carte";
+//@import "composants/bouton";
+//@import "composants/menu";

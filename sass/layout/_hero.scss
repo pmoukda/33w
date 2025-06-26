@@ -1,0 +1,65 @@
+/*/////////////////////////// Layout .hero */
+
+.hero{
+    background-image: url("images/riziere.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    max-height: 650px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    
+    &__contenu{
+        padding: 1rem;
+        max-width: 80ch;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background:linear-gradient(to bottom, rgb(243, 195, 123), rgba(194, 227, 84, 0.788), rgba(220, 220, 154, 0)) ;
+        border-radius: 25px;
+        color: #000;
+        margin-bottom: 30px; 
+        padding: 20px ;   
+    }
+    
+    &__titre{
+        font-size: 40px;
+        margin-bottom: 0; 
+        margin-top: 0;  
+    }
+    
+    &__description{
+        letter-spacing: 0.2px;
+        margin-bottom: 30px; 
+    }
+    
+    &__slogan{
+        font-size: 18px;
+        font-style: italic ;
+        font-weight: bold;
+        background-color: #c2e354ef;  
+        padding: 5px 8px;
+        border-radius: 8px;
+    }
+    
+    &__bouton{
+        background-color: #fc05b6 ;
+        max-width: 27ch;
+        text-align: center;
+        padding: 1rem ;
+        margin-top: 40px; 
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 17px;
+        box-shadow: 3px 3px 8px rgb(69, 68, 68);
+      
+        &:hover{
+            background-color: #fff;//#3acb8d;
+            color: #fc05b6;
+        }
+    }
+}

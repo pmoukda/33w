@@ -1,0 +1,111 @@
+/*/////////////////////////// Layout .piedpage */
+
+.piedpage{
+    background-color: rgb(5, 5, 5);
+    margin-top: 50px;
+    font-size: 14px;
+    padding: 20px;
+    
+    &__nav{
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 0;
+        max-width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        @media screen and (max-width: $point-rupture){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__titre{
+        color: white;
+        padding: 8px;
+    }
+    &__menu{
+        list-style-type: none;
+        padding: 0;
+
+        & .menu{
+            padding: 10px;
+            & a{
+                color: rgb(252, 5, 182);
+            }
+        }
+    }
+    &__menu-item{
+        
+        & a{
+            display: block;
+            color: #fff;
+            padding: .5rem;
+            text-decoration: none;
+            
+            &:hover {
+                color: rgb(252, 5, 182);
+                border-radius: 10px;
+            }
+        }
+    }
+    &__recherche{
+       justify-self: center;
+
+       & .recherche__input{
+        width: 50ch;
+
+           &::placeholder{
+         text-align: center;
+      }
+       }
+    }
+    
+    &__contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 20px;
+        
+        @media screen and (max-width: $point-rupture){
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+    
+    &__coordonnes{
+        color: #fff;
+
+        & a{
+           color:rgb(252, 5, 182); 
+        }
+        
+        @media screen and (max-width: $point-rupture){
+            line-height: 1;
+        }
+    }
+    
+    &__medias{
+        padding-left: 50px;
+        
+        & img{
+            max-width: 30px;
+            padding: 3px;
+            cursor: pointer; 
+        }   
+    }
+    
+    &__droit-auteur{
+        font-size: 11px;
+        text-align: center;
+        padding: 15px 50px 0 50px ;
+        color: #fff;
+        margin: 0;
+        border-top: 1px solid #ffffff79;
+        max-width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

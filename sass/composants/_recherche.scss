@@ -1,0 +1,36 @@
+/*
+/////////////// composant.recherche
+*/
+
+.recherche{
+   display: flex;
+   align-items: center;
+   padding: 1rem;
+   
+   &__input{
+      border: none;
+      border-radius: 8px 0 0 8px;
+      outline: none;
+      min-height: 5ch;
+      padding: 0 1rem 0 1rem;
+      font-size: 12px;
+      @media screen and (max-width: $point-rupture){
+         display: none;
+      } 
+      &::placeholder{
+         font-size: 15px;
+      }
+   }
+
+   &__bouton{
+      border:none;
+      border-radius: 0 8px 8px  0;
+      background-color: rgb(252, 5, 182);
+      cursor: pointer;
+      padding: 5px 6px 0px 6px;
+      
+      @media screen and (max-width: $point-rupture){
+        display: none;
+      } 
+   } 
+}

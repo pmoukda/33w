@@ -1,0 +1,456 @@
+@charset "UTF-8";
+/*
+Theme Name: thème-33w
+Theme URI: https://referenced.ca
+Author: Eddy Martin
+Author URI: https://github.com/eddytuto
+Description: Thème de base développer dans le cadre du cours de Worpress
+Version: 1.0
+Tested up to: 6.2
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: club-voyage
+*/
+/* Importation des feuilles de style du thème */
+/*////////////////////////// variables */
+/* Base */
+/* Layout */
+/*/////////////////////////// Layout .general */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* + :is(h1, h2, h3, h4, h5, h6, p, q) {
+  margin-top: 20px;
+}
+
+section:not(:first-of-type) {
+  margin-top: 80px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+}
+
+.global {
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section {
+  flex: 1;
+}
+
+/*/////////////////////////// Layout .entete */
+.chk__menu {
+  display: none;
+}
+
+.chk__menu:checked ~ .entete__nav {
+  display: flex;
+  flex-direction: column;
+}
+.chk__menu:checked ~ .entete__nav .entete__menu {
+  flex-direction: column;
+}
+
+.custom-logo {
+  width: 100px;
+  height: 75px;
+}
+
+.entete {
+  background-color: rgb(5, 5, 5);
+  /*  /////////////////////// Navigation */
+}
+.entete__contenu {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3rem;
+}
+.entete__logo {
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+}
+.entete__nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 2rem 0 auto;
+}
+@media screen and (max-width: 845px) {
+  .entete__nav {
+    display: none;
+    margin: 2rem 3rem 0 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.entete__burger {
+  display: none;
+}
+@media screen and (max-width: 845px) {
+  .entete__burger {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+  }
+}
+.entete__menu {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+  padding-right: 40px;
+}
+@media screen and (max-width: 845px) {
+  .entete__menu {
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+    padding-left: 0;
+  }
+}
+.entete__menu a {
+  color: #fff;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.entete__menu a:hover {
+  color: rgb(252, 5, 182);
+  border-radius: 10px;
+}
+.entete__menu-item a {
+  display: block;
+  color: #fff;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.entete__menu-item a:hover {
+  color: rgb(252, 5, 182);
+  border-radius: 10px;
+}
+
+/*/////////////////////////// Layout .hero */
+.hero {
+  background-image: url("images/riziere.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  max-height: 650px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+.hero__contenu {
+  padding: 1rem;
+  max-width: 80ch;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background: linear-gradient(to bottom, rgb(243, 195, 123), rgba(194, 227, 84, 0.788), rgba(220, 220, 154, 0));
+  border-radius: 25px;
+  color: #000;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.hero__titre {
+  font-size: 40px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.hero__description {
+  letter-spacing: 0.2px;
+  margin-bottom: 30px;
+}
+.hero__slogan {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  background-color: rgba(194, 227, 84, 0.937254902);
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+.hero__bouton {
+  background-color: #fc05b6;
+  max-width: 27ch;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 40px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  box-shadow: 3px 3px 8px rgb(69, 68, 68);
+}
+.hero__bouton:hover {
+  background-color: #fff;
+  color: #fc05b6;
+}
+
+/*/////////////////////////// Layout .galerie */
+.galerie {
+  max-width: 91%;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+.galerie__images {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 10px;
+}
+.galerie__images img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  max-width: 250px;
+  border: 3px solid #403f3f;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1014px) {
+  .galerie__images img {
+    aspect-ratio: 3/2;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 677px) {
+  .galerie__images img {
+    aspect-ratio: 2/1;
+    max-width: 100%;
+  }
+}
+
+/*/////////////////////////// Layout .piedpage */
+.piedpage {
+  background-color: rgb(5, 5, 5);
+  margin-top: 50px;
+  font-size: 14px;
+  padding: 20px;
+}
+.piedpage__nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 0;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (max-width: 845px) {
+  .piedpage__nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.piedpage__titre {
+  color: white;
+  padding: 8px;
+}
+.piedpage__menu {
+  list-style-type: none;
+  padding: 0;
+}
+.piedpage__menu .menu {
+  padding: 10px;
+}
+.piedpage__menu .menu a {
+  color: rgb(252, 5, 182);
+}
+.piedpage__menu-item a {
+  display: block;
+  color: #fff;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+.piedpage__menu-item a:hover {
+  color: rgb(252, 5, 182);
+  border-radius: 10px;
+}
+.piedpage__recherche {
+  justify-self: center;
+}
+.piedpage__recherche .recherche__input {
+  width: 50ch;
+}
+.piedpage__recherche .recherche__input::placeholder {
+  text-align: center;
+}
+.piedpage__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+@media screen and (max-width: 845px) {
+  .piedpage__contact {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.piedpage__coordonnes {
+  color: #fff;
+}
+.piedpage__coordonnes a {
+  color: rgb(252, 5, 182);
+}
+@media screen and (max-width: 845px) {
+  .piedpage__coordonnes {
+    line-height: 1;
+  }
+}
+.piedpage__medias {
+  padding-left: 50px;
+}
+.piedpage__medias img {
+  max-width: 30px;
+  padding: 3px;
+  cursor: pointer;
+}
+.piedpage__droit-auteur {
+  font-size: 11px;
+  text-align: center;
+  padding: 15px 50px 0 50px;
+  color: #fff;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.4745098039);
+  max-width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.infolettre {
+  max-width: 55%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+}
+.infolettre__titre {
+  text-align: center;
+  font-style: italic;
+  font-family: "Montserrat";
+}
+.infolettre__formulaire {
+  border-radius: 8px;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: rgba(143, 226, 190, 0.6039215686);
+}
+.infolettre__fieldset {
+  border: 1px solid black;
+}
+.infolettre__legend {
+  font-size: 17px;
+}
+.infolettre__input {
+  outline: 0;
+  padding: 5px;
+  border-radius: 5px;
+  border: 0;
+}
+.infolettre__bouton {
+  padding: 5px 20px;
+  border: none;
+  margin-left: 0px;
+  margin-top: 20px;
+}
+
+.populaire {
+  justify-self: center;
+  margin-top: 50px;
+}
+.populaire img {
+  border-radius: 8px;
+  object-fit: cover;
+  max-width: 100%;
+}
+.populaire p {
+  max-width: 90ch;
+}
+
+/* //////////////////////// Composants */
+/*
+/////////////// composant.recherche
+*/
+.recherche {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.recherche__input {
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  min-height: 5ch;
+  padding: 0 1rem 0 1rem;
+  font-size: 12px;
+}
+@media screen and (max-width: 845px) {
+  .recherche__input {
+    display: none;
+  }
+}
+.recherche__input::placeholder {
+  font-size: 15px;
+}
+.recherche__bouton {
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: rgb(252, 5, 182);
+  cursor: pointer;
+  padding: 5px 6px 0px 6px;
+}
+@media screen and (max-width: 845px) {
+  .recherche__bouton {
+    display: none;
+  }
+}
+
+.conteneur {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.conteneur__carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 300px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.conteneur__galerie {
+  flex: 1 0 100%;
+}
+.conteneur__titre {
+  margin-bottom: 0;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+.populaire{
+    justify-self: center;
+    margin-top: 50px;
+
+    & img{
+        border-radius: 8px;
+        object-fit: cover;
+        max-width: 100%;
+    }
+  
+    & p{
+        max-width: 90ch;
+    }
+}
