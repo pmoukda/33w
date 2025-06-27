@@ -7,6 +7,7 @@
 ?>
 <?php
   $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
+  $hero_adresse = get_theme_mod('hero_adresse', 'Default Title');
 ?>
 
 <div class="hero__contenu">
@@ -18,5 +19,6 @@
   <q class="hero__slogan">Des destinations de rêve, des souvenirs pour la vie.</q>
   <div class="hero__bouton">Découvrir nos destinations</div>
   <p>Auteur du thème:<?= $hero_auteur?></p>
+  <p>Adresse du club:<?= $hero_adresse?></p>
 </div>
   

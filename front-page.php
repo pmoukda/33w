@@ -7,7 +7,7 @@
 
 <?php get_header(); ?>
 <!-- section hero -->
-<section class="hero">
+<section class="hero" style="background-image: url('<?= get_template_directory_uri() ?> /images/riziere.jpg');">
   <?php get_template_part("gabarit/hero"); ?> 
 </section>
 </section>
@@ -46,5 +46,4 @@
   <section class="populaire"> 
     <?php get_template_part("gabarit/populaire"); ?>
   </section>
-  
 <?php get_footer(); ?>

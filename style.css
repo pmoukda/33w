@@ -45,7 +45,7 @@ body {
 .global {
   padding: 0;
   box-sizing: border-box;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -150,7 +150,6 @@ section {
 
 /*/////////////////////////// Layout .hero */
 .hero {
-  background-image: url("images/riziere.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -444,13 +443,36 @@ section {
   flex-direction: column;
   justify-content: space-between;
   flex: 1 0 300px;
-  padding: 10px;
+  padding: 20px;
   border: 1px solid #aaa;
   border-radius: 5px;
+  position: relative;
+}
+.conteneur__appreciation {
+  position: absolute;
+  top: 0;
+  right: 30px;
 }
 .conteneur__galerie {
   flex: 1 0 100%;
+  margin-bottom: 20px;
 }
 .conteneur__titre {
-  margin-bottom: 0;
+  margin-bottom: 20px;
+}
+.conteneur__lien a {
+  color: rgb(252, 5, 182);
+  padding-left: 10px;
+}
+.conteneur .post-categories {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+.conteneur .post-categories a {
+  color: rgb(252, 5, 182);
+}
+.conteneur .post-categories a:hover {
+  color: rgb(138, 5, 100);
 }/*# sourceMappingURL=style.css.map */

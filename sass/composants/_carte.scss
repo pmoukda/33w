@@ -9,15 +9,45 @@
     flex-direction: column;
     justify-content: space-between;
     flex: 1 0 300px;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #aaa;
     border-radius: 5px;
+    position: relative;
   }
-
+  &__appreciation{
+    position: absolute;
+    top: 0;
+    right: 30px;
+  }
+  
   &__galerie{
     flex: 1 0 100%;
+    margin-bottom: 20px;
+
   }
   &__titre{
-    margin-bottom: 0;
+    margin-bottom:20px ;
+    
   }
+  &__lien a{
+      color: rgb(252, 5, 182);
+      padding-left: 10px;
+  }
+  & .post-categories{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+
+    & a{
+      color: rgb(252, 5, 182);
+
+    &:hover{
+      color: rgb(138, 5, 100);
+    }
+    }
+
+  }
+
+  
 }
