@@ -356,11 +356,11 @@ section {
 }
 .infolettre__formulaire {
   border-radius: 8px;
-  padding: 20px 10px;
+  padding: 20px 0px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 5px;
   background-color: rgba(143, 226, 190, 0.6039215686);
 }
 .infolettre__fieldset {

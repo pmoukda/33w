@@ -7,8 +7,9 @@
 
 <?php get_header(); ?>
 <!-- section hero -->
-<section class="hero"></section>
-  <?php get_template_part("gabarit/hero"); ?>
+<section class="hero">
+  <?php get_template_part("gabarit/hero"); ?> 
+</section>
 </section>
     <section class="infolettre">
     <h2 class="infolettre__titre">Abonnez-vous à notre infolettre pour recevoir des exclusivités!</h2>
@@ -40,6 +41,7 @@
       <input class="infolettre__bouton hero__bouton" type="submit" value="S'inscrire">
     </form>
   </section>
+
   <!-- section populaire -->
   <section class="populaire"> 
     <?php get_template_part("gabarit/populaire"); ?>
