@@ -6,5 +6,6 @@
  */
     echo '<article class="conteneur__galerie">';
         the_content();
-        echo'</article>';
-?>            
+    echo'</article>';
+?> 
+          
