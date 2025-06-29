@@ -9,8 +9,7 @@
 <?php get_header(); ?>
 
   <section class="populaire">
-   <h1>Erreur 404</h1>
-   <h2>L'adresse que vous demandez n'existe pas</h2>
+    <?php get_template_part("gabarit/erreur"); ?>
   </section>
   
 <?php get_footer(); ?>

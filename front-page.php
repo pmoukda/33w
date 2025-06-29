@@ -7,11 +7,10 @@
 
 <?php get_header(); ?>
 <!-- section hero -->
-<section class="hero" style="background-image: url('<?= get_template_directory_uri() ?> /images/riziere.jpg');">
-  <?php get_template_part("gabarit/hero"); ?> 
-</section>
-</section>
-    <section class="infolettre">
+  <section class="hero" style="background-image: url('<?= get_template_directory_uri() ?> /images/riziere.jpg');">
+    <?php get_template_part("gabarit/hero"); ?> 
+  </section>
+  <section class="infolettre">
     <h2 class="infolettre__titre">Abonnez-vous à notre infolettre pour recevoir des exclusivités!</h2>
     <form action="" class="infolettre__formulaire">
       <fieldset class="infolettre__fieldset">

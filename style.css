@@ -244,7 +244,7 @@ section {
 /*/////////////////////////// Layout .piedpage */
 .piedpage {
   background-color: rgb(5, 5, 5);
-  margin-top: 50px;
+  margin-top: 80px;
   font-size: 14px;
   padding: 20px;
 }
@@ -392,6 +392,9 @@ section {
 }
 .populaire p {
   max-width: 90ch;
+}
+.populaire a {
+  color: rgb(252, 5, 182);
 }
 
 /* //////////////////////// Composants */
