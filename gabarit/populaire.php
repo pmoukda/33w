@@ -1,7 +1,13 @@
+<?php
+/**
+ * Template-part populaire.php
+ * séparer la section gallerie du section populaire pour pouvoir ajouter un titre pour les destination
+ * 
+ */
+?>
 <h2 class="conteneur__titre">Galerie</h2>
 <div class=" conteneur global ">
 <?php
-// séparer la section gallerie du section populaire pour pouvoir ajouter un titre pour les destination
 if(have_posts())
 {
   while(have_posts())
