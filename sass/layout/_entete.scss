@@ -95,9 +95,12 @@
       text-transform: uppercase;
       
       &:hover {
-        color: rgb(252, 5, 182);
+        color: #fc05b6;
         border-radius: 10px;
       }
     }
   }
+}
+.current-menu-item a{
+  color: #8fe2be9a;
 }
