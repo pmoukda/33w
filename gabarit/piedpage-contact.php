@@ -11,12 +11,5 @@
     
     <div class="piedpage__medias">
         <p class="piedpage__coordonnes">Suivez-nous</p>
-        <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=fff" width="32" height="32" alt="icone-facebook">
-        <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=fff
-        " width="32" height="32" alt="icone-instagramme">
-        <img src="https://s2.svgbox.net/social.svg?ic=tiktok&color=fff
-        " width="32" height="32" alt="icone-tiktok">
-        <a class="sociaux" href="https://github.com/pmoukda">
-            <img src="https://s2.svgbox.net/social.svg?ic=github&color=fff" width="32" height="32" alt="icone-github">
-        </a>
+          <?php icone_sociaux('#fff'); ?>
     </div>

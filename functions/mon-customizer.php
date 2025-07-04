@@ -45,6 +45,18 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_b
     'label' => __('Image héro en arrière-plan', 'theme_31w'),
     'section' => 'hero_section',
 )));
+///////////////////////// Couleur du texte dans section here
+///////////////////////// champ couleur
+/*créer le champ */
+$wp_customize->add_setting('hero_couleur', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+));
+
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_couleur', array(
+    'label' => __('Couleur du texte', 'theme_31w'),
+    'section' => 'hero_section',
+)));
 
 ////////////////////////////// Ajout du panneau du pied de page
 /* créer le contrôleur*/

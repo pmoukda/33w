@@ -1,7 +1,7 @@
 <?php
 /**
  * Template-part populaire.php
- * séparer la section gallerie du section populaire pour pouvoir ajouter un titre pour les destination
+ * séparer la section galerie du section populaire pour pouvoir ajouter un titre pour les destinations
  * 
  */
 ?>

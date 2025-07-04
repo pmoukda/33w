@@ -144,8 +144,12 @@ section {
   text-transform: uppercase;
 }
 .entete__menu-item a:hover {
-  color: rgb(252, 5, 182);
+  color: #fc05b6;
   border-radius: 10px;
+}
+
+.current-menu-item a {
+  color: rgba(143, 226, 190, 0.6039215686);
 }
 
 /*/////////////////////////// Layout .hero */
@@ -244,7 +248,6 @@ section {
 /*/////////////////////////// Layout .piedpage */
 .piedpage {
   background-color: rgb(5, 5, 5);
-  margin-top: 80px;
   font-size: 14px;
   padding: 20px;
 }
@@ -478,4 +481,6 @@ section {
 }
 .conteneur .post-categories a:hover {
   color: rgb(138, 5, 100);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*///////////////////////////// Animation *//*# sourceMappingURL=style.css.map */
