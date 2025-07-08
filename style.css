@@ -149,15 +149,13 @@ section {
 }
 
 .current-menu-item a {
-  color: rgba(143, 226, 190, 0.6039215686);
+  color: rgba(231, 216, 6, 0.9882352941);
+  text-decoration: underline;
 }
 
 /*/////////////////////////// Layout .hero */
 .hero {
-  background-position: center;
-  background-size: cover;
   height: 100vh;
-  max-height: 650px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -180,10 +178,12 @@ section {
   font-size: 40px;
   margin-bottom: 0;
   margin-top: 0;
+  animation: anime-titre 1s 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 .hero__description {
   letter-spacing: 0.2px;
   margin-bottom: 30px;
+  animation: anime-description 1s 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 .hero__slogan {
   font-size: 18px;
@@ -208,6 +208,42 @@ section {
 .hero__bouton:hover {
   background-color: #fff;
   color: #fc05b6;
+}
+
+@keyframes anime-titre {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes anime-description {
+  0% {
+    transform: translatex(-200px);
+  }
+  100% {
+    transform: translatex(0);
+  }
+}
+.carrousel {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.carrousel__form {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 /*/////////////////////////// Layout .galerie */
@@ -481,6 +517,4 @@ section {
 }
 .conteneur .post-categories a:hover {
   color: rgb(138, 5, 100);
-}
-
-/*///////////////////////////// Animation *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

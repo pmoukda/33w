@@ -3,12 +3,14 @@
  * configuration des nouveaux panneaux du customizer
  */
 
-function theme_31w_customize_register($wp_customize) {
+ function theme_31w_customize_register($wp_customize) {
+
     // Le code pour ajouter des sections, des réglages et des contrôles ira ici.
     $wp_customize->add_section('hero_section', array(
     'title' => __(' Section Héro - Accueil ', 'theme_31w'),
     'priority' => 30,
 ));
+////////////////////// Auteur
 // configuration du champ
 $wp_customize->add_setting('hero_auteur', array(
     'default' => __('Bienvenue sur mon site', 'theme_31w'),
@@ -34,17 +36,57 @@ $wp_customize->add_control('hero_adresse', array(
     'type' => 'text',
 ));
 
-///////////////////////// Image
+
+
+////////////////////// Image 0
 /*créer le champ */
-$wp_customize->add_setting('hero_background', array(
+$wp_customize->add_setting('hero_background_0', array(
     'default' => '',
     'sanitize_callback' => 'esc_url_raw',
 ));
-
-$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
+/* créer le contrôleur*/ 
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background _0', array(
     'label' => __('Image héro en arrière-plan', 'theme_31w'),
     'section' => 'hero_section',
 )));
+
+///////////////////////// Image 1
+/*créer le champ */
+$wp_customize->add_setting('hero_background_1', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+));
+/* créer le contrôleur*/ 
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_1', array(
+    'label' => __('Image héro en arrière-plan', 'theme_31w'),
+    'section' => 'hero_section',
+)));
+
+///////////////////////// Image 2
+/*créer le champ */
+$wp_customize->add_setting('hero_background_2', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+));
+/* créer le contrôleur*/ 
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_2', array(
+    'label' => __('Image héro en arrière-plan', 'theme_31w'),
+    'section' => 'hero_section',
+)));
+///////////////////////// Image 3
+/*créer le champ */
+$wp_customize->add_setting('hero_background_3', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+));
+/* créer le contrôleur*/ 
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_3', array(
+    'label' => __('Image héro en arrière-plan', 'theme_31w'),
+    'section' => 'hero_section',
+)));
+
+
+
 ///////////////////////// Couleur du texte dans section here
 ///////////////////////// champ couleur
 /*créer le champ */
@@ -57,6 +99,8 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_c
     'label' => __('Couleur du texte', 'theme_31w'),
     'section' => 'hero_section',
 )));
+
+
 
 ////////////////////////////// Ajout du panneau du pied de page
 /* créer le contrôleur*/

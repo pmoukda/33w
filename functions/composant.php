@@ -31,7 +31,7 @@ function vague($couleur_haut, $couleur_bas){ ?>
 <style>
     .style-vague{
         position: relative;
-        top: 7px;
+        top: 9px;
         background-color: <?= $couleur_haut?>;
     }
 </style>
