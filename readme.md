@@ -1,6 +1,6 @@
 # TP2 - Site de voyage
 
-### Deuxième étape du développement d'un thème WP
+### Deuxième étape du développement d'un thème WP: Intégrer le Customizer wordPress
 
 #### Auteur : Moukda Phaengvixay
 
