@@ -32,11 +32,36 @@ wp_enqueue_style('main-style',
     null
 );
 
+///////////// script pour menu-burger
 $script_path = get_template_directory() . '/script/checkbox.js';
 $script_url  = get_template_directory_uri() . '/script/checkbox.js';
 
 wp_enqueue_script(
     'mon-script',
+    $script_url,
+    array(),
+    filemtime($script_path),
+    true
+);
+
+////////////////////////// script pour carrousel
+$script_path = get_template_directory() . '/script/carrousel.js';
+$script_url  = get_template_directory_uri() . '/script/carrousel.js';
+
+wp_enqueue_script(
+    'mon-carrousel',
+    $script_url,
+    array(),
+    filemtime($script_path),
+    true
+);
+
+////////////////// script pour genérer les destinations
+$script_path = get_template_directory() . '/script/destination.js';
+$script_url  = get_template_directory_uri() . '/script/destination.js';
+
+wp_enqueue_script(
+    'mes-destinations',
     $script_url,
     array(),
     filemtime($script_path),

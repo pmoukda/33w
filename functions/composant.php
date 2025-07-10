@@ -9,16 +9,16 @@
     // pour enlever le # de la position 0 , onextrait à partir de la position 1
     $couleur = substr($couleur,1)
     ?>
-    <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=<?= $couleur?>" width="32" height="32">
+    <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=<?= $couleur?>" width="23" height="23">
     
     <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=<?= $couleur?>
-" width="32" height="32">
+" width="23" height="23">
     
     <img src="https://s2.svgbox.net/social.svg?ic=tiktok&color=<?= $couleur?>
-" width="32" height="32">
+" width="23" height="23">
     
     <a class="sociaux" href="https://github.com/pmoukda">
-    <img src="https://s2.svgbox.net/social.svg?ic=github&color=<?= $couleur?>" width="32" height="32">
+    <img src="https://s2.svgbox.net/social.svg?ic=github&color=<?= $couleur?>" width="23" height="23">
     </a> 
     <?php 
 }
@@ -31,7 +31,7 @@ function vague($couleur_haut, $couleur_bas){ ?>
 <style>
     .style-vague{
         position: relative;
-        top: 7px;
+        top: 11px;
         background-color: <?= $couleur_haut?>;
     }
 </style>
