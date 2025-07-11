@@ -5,6 +5,7 @@
  */
 ?>
 <?php
+$footer_droit_auteur = get_theme_mod('footer_droit_auteur');
 $footer_couleur = "#000";
 vague("#fff", $footer_couleur); ?>
 <footer class="piedpage" style="background-color: <?= $footer_couleur ?> ;">
@@ -14,10 +15,14 @@ vague("#fff", $footer_couleur); ?>
     <div class="piedpage__recherche">
       <?php get_search_form();?>
     </div>
+   
     <div class="piedpage__contact">
+      <figure class="footer__logo">
+      <?= get_custom_logo(); ?>
+    </figure> 
       <?php get_template_part("gabarit/piedpage-contact"); ?>
     </div>
-      <p class="piedpage__droit-auteur"> Moukda Phaengvixay &copy 2025. Tous droits réservés</p>
+    <p class="piedpage__droit-auteur"><?=$footer_droit_auteur?></p>
     </footer>
      <?php wp_footer(); ?>
 </body>

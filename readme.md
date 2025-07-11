@@ -4,7 +4,5 @@
 
 #### Auteur : Moukda Phaengvixay
 
-#### Adresse de la github-page
-
 #### Adresse du site distant sur WHC
 https://gftnth00.mywhc.ca/33we_19/

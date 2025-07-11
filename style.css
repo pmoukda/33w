@@ -323,15 +323,12 @@ section {
   padding: 10px;
 }
 .piedpage__menu .menu a {
-  color: rgb(252, 5, 182);
-}
-.piedpage__menu-item a {
   display: block;
   color: #fff;
   padding: 0.5rem;
   text-decoration: none;
 }
-.piedpage__menu-item a:hover {
+.piedpage__menu .menu a:hover {
   color: rgb(252, 5, 182);
   border-radius: 10px;
 }
@@ -373,7 +370,6 @@ section {
 }
 .piedpage__medias img {
   max-width: 30px;
-  padding: 3px;
   cursor: pointer;
 }
 .piedpage__droit-auteur {

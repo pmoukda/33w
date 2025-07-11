@@ -19,7 +19,7 @@
   $hero_background[3] = get_theme_mod("hero_background_3");
   ?>
   <div class="carrousel" style="background-image: url('<?= $hero_background[0] ?>'); opacity:1"></div>
-  <div class="carrousel" style="background-image: url('<?= $hero_background[1]?>'); opacity:0"></div>
+  <div class="carrousel" style="background-image: url('<?= $hero_background[1] ?>'); opacity:0"></div>
   <div class="carrousel" style="background-image: url('<?= $hero_background[2] ?>'); opacity:0"></div>
   <div class="carrousel" style="background-image: url('<?= $hero_background[3] ?>'); opacity:0"></div>
 
