@@ -75,8 +75,6 @@ function theme_31w_customize_register($wp_customize) {
     )));
 
     
-    
-    
     ///////////////////////// Couleur du texte dans section hero
     ///////////////////////// champ couleur
     /*créer le champ */
@@ -89,7 +87,6 @@ function theme_31w_customize_register($wp_customize) {
         'label' => __('Couleur du texte', 'theme_31w'),
         'section' => 'hero_section',
     )));
-    
     
     
     ////////////////////////////// Ajout du panneau du pied de page

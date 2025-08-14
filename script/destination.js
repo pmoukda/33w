@@ -23,10 +23,14 @@
             data.forEach(article => {
                 const articleElement = document.createElement('div');
                 articleElement.innerHTML = `
-                <h3>${article.title.rendered}</h3>
-                <div>${article.excerpt.rendered}</div>
-                <a href="${article.link}">Lire plus</a>
-                `;// titre, resumé et lien
+                    <label for="accordeon__chk__${article.id}" class="accordeon">
+                        <h3>${article.title.rendered}</h3>
+                    </label>
+                    <input type="checkbox" class="accordeon__chk" id="accordeon__chk__${article.id}">                    
+                    <div class="accordeon__excerpt">${article.excerpt.rendered}
+                        <a href="${article.link}">Lire plus</a>
+                    </div>
+                    `;// titre, resumé et lien
                 destinationList .appendChild(articleElement);
             });
         })
