@@ -7,7 +7,7 @@
 <?php
 $footer_droit_auteur = get_theme_mod('footer_droit_auteur');
 $footer_couleur = "#000";
-vague("#fff", $footer_couleur); ?>
+vague("#f9f7f4", $footer_couleur); ?>
 <footer class="piedpage" style="background-color: <?= $footer_couleur ?> ;">
     <nav class="piedpage__nav">
      <?php get_template_part("gabarit/piedpage-nav"); ?>

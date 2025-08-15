@@ -3,6 +3,7 @@
     margin-right: auto;
     margin-left: auto;
     margin-top: 20px;
+   
 
     &__titre{
         text-align: center;
@@ -18,6 +19,7 @@
         flex-wrap: wrap;
         gap: 5px;
         background-color: #8fe2be9a;
+        box-shadow: 2px 3px 6px;
     }
 
     &__fieldset{

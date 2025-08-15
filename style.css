@@ -38,6 +38,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.5px;
+  background-color: #f9f7f4;
   margin: 0;
   padding: 0;
 }
@@ -403,6 +404,7 @@ section {
   flex-wrap: wrap;
   gap: 5px;
   background-color: rgba(143, 226, 190, 0.6039215686);
+  box-shadow: 2px 3px 6px;
 }
 .infolettre__fieldset {
   border: 1px solid black;
@@ -437,6 +439,53 @@ section {
 }
 .populaire a {
   color: rgb(252, 5, 182);
+}
+
+.list_categories {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: center;
+}
+.list_categories li {
+  background-color: rgba(143, 226, 190, 0.6039215686);
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+.list_categories li:hover {
+  transform: scale(1.05);
+  background-color: rgba(231, 216, 6, 0.9882352941);
+}
+
+.destination {
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+  max-width: 1200px;
+}
+.destination__titre {
+  margin-top: 60px;
+}
+.destination__list {
+  background-color: rgba(1, 18, 24, 0.9882352941);
+  color: aliceblue;
+  border-radius: 3px;
+}
+.destination div {
+  padding: 5px 20px;
+  border: 1px solid black;
+}
+.destination a {
+  color: #fc05b6;
+}
+.destination h3 {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.destination h3:hover {
+  transform: scale(1.02);
 }
 
 /* //////////////////////// Composants */
@@ -492,6 +541,10 @@ section {
   border: 1px solid #aaa;
   border-radius: 5px;
   position: relative;
+  transition: transform 0.2s;
+}
+.conteneur__carte:hover {
+  transform: scale(1.02);
 }
 .conteneur__appreciation {
   position: absolute;

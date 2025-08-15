@@ -1,0 +1,20 @@
+.list_categories{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+    
+    
+    & li{
+        background-color: #8fe2be9a ;
+        padding: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: transform 0.2s;
+        
+        &:hover {
+            transform: scale(1.05);
+            background-color: #e7d806fc;
+        }
+    } 
+} 

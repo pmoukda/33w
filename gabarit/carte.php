@@ -29,5 +29,5 @@
   <small>Température maximum: <?php the_field('temperature_maximum'); ?>&deg;C</small>
   <small>Température moyenne: <?php the_field('temperature_moyenne'); ?>&deg;C</small>
 
-  <?php  the_category()?>
+  <?php  filtre_categorie('Populaire')?>
 </article>
