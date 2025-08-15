@@ -19,6 +19,8 @@ Text Domain: club-voyage
 /*/////////////////////////// Layout .general */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 *, *:before, *:after {
@@ -210,6 +212,10 @@ section {
 .hero__bouton:hover {
   background-color: #fff;
   color: #fc05b6;
+}
+.hero a {
+  text-decoration: none;
+  color: inherit;
 }
 .hero__info {
   font-size: 12px;

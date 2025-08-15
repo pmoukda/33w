@@ -17,7 +17,7 @@
     <img src="https://s2.svgbox.net/social.svg?ic=tiktok&color=<?= $couleur?>
 " width="21" height="21">
     
-    <a class="sociaux" href="https://github.com/pmoukda">
+    <a class="sociaux" href="https://github.com/pmoukda/33w/tree/tp2">
     <img src="https://s2.svgbox.net/social.svg?ic=github&color=<?= $couleur?>" width="21" height="21">
     </a> 
     <?php 

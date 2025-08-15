@@ -61,6 +61,10 @@
             color: #fc05b6;
         }
     }
+    & a{
+        text-decoration: none;
+        color: inherit;
+    }
     &__info{
         font-size: 12px;
     }

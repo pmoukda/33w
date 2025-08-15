@@ -11,7 +11,7 @@ $hero_couleur_info = get_theme_mod('hero_couleur_info');
 $hero_auteur = get_theme_mod('hero_auteur', 'Moukda');
 $hero_adresse = get_theme_mod('hero_adresse', 'Default Title');
 $hero_description = get_theme_mod('hero_description', 'Default Title');
-$hero_bouton = get_theme_mod('hero_bouton', 'Découvrir nos destinations');
+$hero_bouton = get_theme_mod('hero_bouton', 'Inscription');
 ?>
 <style>
 .hero__contenu{
@@ -23,7 +23,7 @@ $hero_bouton = get_theme_mod('hero_bouton', 'Découvrir nos destinations');
 <h1 class="hero__titre"><?php bloginfo("name") ?></h1>
 <p class="hero__description"><?= $hero_description?></p> 
 <q class="hero__slogan"><?php bloginfo("description") ?></q>
-<div class="hero__bouton"><?= $hero_bouton?></div>
+<div class="hero__bouton"><a  href="#inscription"><?= $hero_bouton?></a></div>
 <p class="hero__info">Auteur du thème: <?= $hero_auteur?></p>
 <p class="hero__info">Adresse du club: <?= $hero_adresse?></p>
 <span class="hero__icones-sociaux"><?php icone_sociaux('#000')?></span>
