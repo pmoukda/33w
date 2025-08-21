@@ -40,39 +40,41 @@ function theme_31w_customize_register($wp_customize) {
         'type' => 'text',
     ));
     
- ////////////////////// image 0
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_0', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
+////////////////////////////// Nombres images
+    /*créer le champ */
+     $wp_customize->add_setting('nombre_images_carrousel', array(
+        'default' => __(3, 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
     ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_0', array(
-        'label' => __('Image en arrière plan', 'theme_31w'),
+    //  configuration du contrôleur
+    $wp_customize->add_control('nombre_images_carrousel', array(
+        'label' => __('nombre images', 'theme_31w'),
         'section' => 'hero_section',
-    )));
-    /////////////// image 1
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_1', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
+        'type' => 'number',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 5,
+        ),
     ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_1', array(
-        'label' => __('Image en arrière plan', 'theme_31w'),
-        'section' => 'hero_section',
-    )));
-    ///////////// image 2
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_2', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_2', array(
-        'label' => __('Image en arrière plan', 'theme_31w'),
-        'section' => 'hero_section',
-    )));
+   
+    
+   // Boucle pour traverser le nombre d'images 
+  $max_slides = 10;
+
+    for ($i = 0; $i < $max_slides; $i++) {
+        $setting_id = "hero_background_$i";
+
+        $wp_customize->add_setting($setting_id, array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, $setting_id, array(
+            'label'    => __("Image arrière-plan #$i", 'theme_31w'),
+            'section'  => 'hero_section',
+            'settings' => $setting_id,
+        )));
+    }
 
     
     ///////////////////////// Couleur du texte dans section hero
@@ -87,8 +89,10 @@ function theme_31w_customize_register($wp_customize) {
         'label' => __('Couleur du texte', 'theme_31w'),
         'section' => 'hero_section',
     )));
+
     
-    
+
+
     ////////////////////////////// Ajout du panneau du pied de page
     /* créer le contrôleur*/
     $wp_customize->add_section('footer_section', array(
@@ -137,7 +141,7 @@ function theme_31w_customize_register($wp_customize) {
         'type' => 'text',
     ));
 
-    ///////////////////// Courriel
+    ///////////////////// droit Auteur
   $wp_customize->add_setting('footer_droit_auteur', array(
         'default' => __('Moukda Phaengvixay &copy 2025. Tous droits réservés', 'theme_31w'),
         'sanitize_callback' => 'sanitize_text_field'
