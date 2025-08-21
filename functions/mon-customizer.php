@@ -93,12 +93,23 @@ function theme_31w_customize_register($wp_customize) {
     
 
 
-    ////////////////////////////// Ajout du panneau du pied de page
+    ////////////////////////////// Ajout du panneau du pied de page ////////////////////////////////////////////////////////////////////////
     /* créer le contrôleur*/
     $wp_customize->add_section('footer_section', array(
         'title' => __(' Section pied de page ', 'theme_31w'),
         'priority' => 30,
     ));
+
+    ///////image dans le piedpage
+    $wp_customize->add_setting('footer_background_0', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_background_0', array(
+        'label' => __('Footer Background Image', 'theme_31w'),
+        'section' => 'footer_section',
+    )));
 
 
     ////////////////////////////// Adresse

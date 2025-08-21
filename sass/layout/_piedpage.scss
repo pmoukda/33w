@@ -100,5 +100,21 @@
         margin-right: auto;
         margin-left: auto;
     }
-  
+    
+    &__image{
+        width: 100%;
+        height: 125px; 
+        object-fit: cover;
+        background-position: center;
+    }
+    
+}
+@keyframes animeVague{
+    0%{
+        transform: translateX(-400px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+      
 }

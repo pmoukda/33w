@@ -5,15 +5,19 @@
  */
 ?>
 <?php
+$footer_image = get_theme_mod('footer_background_0');
 $footer_droit_auteur = get_theme_mod('footer_droit_auteur');
 $footer_couleur = "#000";
 vagueFooter("#f9f7f4", $footer_couleur); ?>
 <footer class="piedpage" style="background-color: <?= $footer_couleur ?> ;">
+  
     <nav class="piedpage__nav">
      <?php get_template_part("gabarit/piedpage-nav"); ?>
     </nav>
     <div class="piedpage__recherche">
       <?php get_search_form();?>
+     
+      <img src="<?= esc_url($footer_image); ?>" class="piedpage__image" alt="Image du footer">
     </div>
    
     <div class="piedpage__contact">

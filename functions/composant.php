@@ -31,8 +31,9 @@ function vagueFooter($couleur_haut, $couleur_bas){ ?>
 <style>
     .style-vague{
         position: relative;
-        top: 10px;
+        top: 8px;
         background-color: <?= $couleur_haut?>;
+        animation:animeVague 6s ease-in-out infinite
     }
 </style>
     <svg class="style-vague" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
