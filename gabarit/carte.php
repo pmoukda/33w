@@ -30,4 +30,5 @@
   <small>Température moyenne: <?php the_field('temperature_moyenne'); ?>&deg;C</small>
 
   <?php  filtre_categorie('Populaire')?>
+
 </article>
