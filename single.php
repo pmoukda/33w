@@ -6,6 +6,7 @@
 
 ?>
 
+
 <?php get_header(); ?>
 
   <section class="populaire">
@@ -23,6 +24,7 @@
       }
     }  
     ?>
+    <?= get_template_part('gabarit/single-post')?>
   </section>
   
 <?php get_footer(); ?>

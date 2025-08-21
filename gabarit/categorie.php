@@ -2,6 +2,7 @@
 <h2 class="conteneur__titre"></h2>
 <div class=" conteneur global ">
 <?php
+
 if(have_posts())
 {
   while(have_posts())
@@ -18,5 +19,7 @@ if(have_posts())
     <?php 
   } 
 } 
+
 ?>
+
 </div>

@@ -1,6 +1,6 @@
-# TP2 - Site de voyage
+# TP2 - Site de voyage (Club Voyage Paradise)
 
-### Troisième étape du développement d'un thème WP: Intégrer le Customizer wordPress
+### Troisième étape du développement d'un thème WP: Rest API  wordPress
 
 #### Auteur : Moukda Phaengvixay
 

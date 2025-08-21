@@ -154,6 +154,43 @@ function theme_31w_customize_register($wp_customize) {
     ));
 
 
+
+
+     ////////////////////////////// Ajout du panneau dans single page
+    /* créer le contrôleur*/
+    $wp_customize->add_section('categorie_section', array(
+        'title' => __(' Section categorie', 'theme_31w'),
+        'priority' => 30,
+    ));
+
+
+    ////////////////////////////// Auteur
+    /*créer le champ */
+     $wp_customize->add_setting('categorie_auteur', array(
+        'default' => __('Moukda Phaengvixay', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('categorie_auteur', array(
+        'label' => __('Auteur', 'theme_31w'),
+        'section' => 'categorie_section',
+        'type' => 'text',
+    ));
+
+    ////////////////////////////// date
+    /*créer le champ */
+     $wp_customize->add_setting('categorie_date', array(
+        'default' => __('2025-08-21', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('categorie_date', array(
+        'label' => __('Date', 'theme_31w'),
+        'section' => 'categorie_section',
+        'type' => 'date',
+    ));
+
+
 }
 
 add_action('customize_register', 'theme_31w_customize_register');

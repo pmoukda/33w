@@ -14,4 +14,4 @@
     <?php get_template_part("gabarit/categorie"); ?>
   </section>
   
-<?php get_footer(); ?>
+  <?php get_footer(); ?>
