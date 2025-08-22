@@ -202,6 +202,90 @@ function theme_31w_customize_register($wp_customize) {
     ));
 
 
+    ///////////////////////////////////section erreur 404 ////////////////////////////////////
+
+     /* créer le contrôleur*/
+    $wp_customize->add_section('404_section', array(
+        'title' => __(' Section erreur 404 ', 'theme_31w'),
+        'priority' => 30,
+    ));
+
+    ///////image dans le piedpage
+    $wp_customize->add_setting('404_image_background', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '404_image_background', array(
+        'label' => __('404 Image Background ', 'theme_31w'),
+        'section' => '404_section',
+    )));
+
+
+    ////////////////////////////// titre
+    /*créer le champ */
+     $wp_customize->add_setting('404_titre', array(
+        'default' => __("Oops, vous avez échoué sur l'île 404 !", 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('404_titre', array(
+        'label' => __('Titre', 'theme_31w'),
+        'section' => '404_section',
+        'type' => 'text',
+    ));
+
+
+    ////////////////////////////// Message
+    /*créer le champ */
+  $wp_customize->add_setting('404_message', array(
+        'default' => __("Pas de panique, cher membre explorateur ! Vous avez dérivé un peu trop loin des destinations de rêve que notre club a soigneusement sélectionnées pour vous. Reprenez votre périple en cliquant sur 'Accueil' pour découvrir à nouveau nos voyages d’exception !", 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('404_message', array(
+        'label' => __('Message', 'theme_31w'),
+        'section' => '404_section',
+        'type' => 'text',
+    ));
+
+    //////////////////////////// bouton 
+    $wp_customize->add_setting('404_bouton', array(
+        'default' => __("Retour à l'accueil", 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('404_bouton', array(
+        'label' => __('Text du bouton', 'theme_31w'),
+        'section' => '404_section',
+        'type' => 'text',
+    ));
+
+        ///////////////////////// Couleur du bouton
+    ///////////////////////// champ couleur
+    /*créer le champ */
+    $wp_customize->add_setting('404_couleur_bouton', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_couleur_bouton', array(
+        'label' => __('Couleur de bouton', 'theme_31w'),
+        'section' => '404_section',
+    )));
+
+        ///////////////////////// Couleur zone de recherche
+    ///////////////////////// champ couleur
+    /*créer le champ */
+    $wp_customize->add_setting('404_couleur_zone_recherche', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_couleur_zone_recherche', array(
+        'label' => __('Couleur du zone de recherche', 'theme_31w'),
+        'section' => '404_section',
+    )));
 }
 
 add_action('customize_register', 'theme_31w_customize_register');
