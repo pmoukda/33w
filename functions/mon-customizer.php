@@ -256,7 +256,7 @@ function theme_31w_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control('404_bouton', array(
-        'label' => __('Text du bouton', 'theme_31w'),
+        'label' => __('Texte du bouton', 'theme_31w'),
         'section' => '404_section',
         'type' => 'text',
     ));
