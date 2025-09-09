@@ -19,6 +19,8 @@ Text Domain: club-voyage
 /*/////////////////////////// Layout .general */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 *, *:before, *:after {
@@ -38,6 +40,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.5px;
+  background-color: #f9f7f4;
   margin: 0;
   padding: 0;
 }
@@ -162,6 +165,7 @@ section {
   flex-direction: column;
   justify-content: space-around;
   position: relative;
+  overflow: hidden;
 }
 .hero__contenu {
   padding: 1rem;
@@ -210,6 +214,10 @@ section {
   background-color: #fff;
   color: #fc05b6;
 }
+.hero a {
+  text-decoration: none;
+  color: inherit;
+}
 .hero__info {
   font-size: 12px;
 }
@@ -241,6 +249,9 @@ section {
   height: 100%;
   top: 0;
   left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
 }
 .carrousel__form {
   position: absolute;
@@ -323,15 +334,12 @@ section {
   padding: 10px;
 }
 .piedpage__menu .menu a {
-  color: rgb(252, 5, 182);
-}
-.piedpage__menu-item a {
   display: block;
   color: #fff;
   padding: 0.5rem;
   text-decoration: none;
 }
-.piedpage__menu-item a:hover {
+.piedpage__menu .menu a:hover {
   color: rgb(252, 5, 182);
   border-radius: 10px;
 }
@@ -373,7 +381,6 @@ section {
 }
 .piedpage__medias img {
   max-width: 30px;
-  padding: 3px;
   cursor: pointer;
 }
 .piedpage__droit-auteur {
@@ -387,7 +394,21 @@ section {
   margin-right: auto;
   margin-left: auto;
 }
+.piedpage__image {
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  background-position: center;
+}
 
+@keyframes animeVague {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .infolettre {
   max-width: 55%;
   margin-right: auto;
@@ -407,6 +428,7 @@ section {
   flex-wrap: wrap;
   gap: 5px;
   background-color: rgba(143, 226, 190, 0.6039215686);
+  box-shadow: 2px 3px 6px;
 }
 .infolettre__fieldset {
   border: 1px solid black;
@@ -441,6 +463,90 @@ section {
 }
 .populaire a {
   color: rgb(252, 5, 182);
+}
+
+.list_categories {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: center;
+}
+.list_categories li {
+  background-color: rgba(143, 226, 190, 0.6039215686);
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+.list_categories li:hover {
+  transform: scale(1.05);
+  background-color: rgba(231, 216, 6, 0.9882352941);
+}
+
+.destination {
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+  max-width: 1200px;
+}
+.destination__titre {
+  margin-top: 60px;
+}
+.destination__list {
+  background-color: rgba(1, 18, 24, 0.9882352941);
+  color: aliceblue;
+  border-radius: 3px;
+}
+.destination div {
+  padding: 5px 20px;
+  border: 1px solid black;
+}
+.destination a {
+  color: #fc05b6;
+}
+.destination h3 {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.destination h3:hover {
+  transform: scale(1.02);
+}
+
+.erreur-404 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.erreur-404__contenu {
+  position: absolute;
+  padding: 1rem;
+  margin: auto;
+  top: 300px;
+  left: 100px;
+  right: 100px;
+  max-width: 80ch;
+}
+.erreur-404__titre {
+  background-color: rgba(255, 255, 255, 0.201);
+  color: rgb(228, 183, 20);
+  text-align: center;
+}
+.erreur-404__message {
+  color: rgb(228, 183, 20);
+  max-width: 80ch;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.201);
+}
+.erreur-404__bouton {
+  color: rgb(0, 187, 255);
+  cursor: pointer;
+}
+.erreur-404__recherche {
+  color: rgb(228, 183, 20);
+}
+.erreur-404__image {
+  background-size: cover;
 }
 
 /* //////////////////////// Composants */
@@ -496,6 +602,10 @@ section {
   border: 1px solid #aaa;
   border-radius: 5px;
   position: relative;
+  transition: transform 0.2s;
+}
+.conteneur__carte:hover {
+  transform: scale(1.02);
 }
 .conteneur__appreciation {
   position: absolute;
@@ -524,4 +634,18 @@ section {
 }
 .conteneur .post-categories a:hover {
   color: rgb(138, 5, 100);
-}/*# sourceMappingURL=style.css.map */
+}
+
+.accordeon__chk {
+  display: none;
+}
+.accordeon__excerpt {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordeon__chk:checked ~ .accordeon__excerpt {
+  max-height: 200px;
+}
+
+/* input type="checkbox"*//*# sourceMappingURL=style.css.map */

@@ -23,42 +23,36 @@
     &__titre{
         color: white;
         padding: 8px;
+        
     }
     &__menu{
         list-style-type: none;
         padding: 0;
-
+        
         & .menu{
             padding: 10px;
             & a{
-                color: rgb(252, 5, 182);
-            }
-        }
-    }
-    &__menu-item{
-        
-        & a{
-            display: block;
-            color: #fff;
-            padding: .5rem;
-            text-decoration: none;
-            
-            &:hover {
-                color: rgb(252, 5, 182);
-                border-radius: 10px;
+                display: block;
+                color: #fff;
+                padding: .5rem;
+                text-decoration: none;
+                &:hover {
+                    color: rgb(252, 5, 182);
+                    border-radius: 10px;
+                }
             }
         }
     }
     &__recherche{
-       justify-self: center;
-
-       & .recherche__input{
-        width: 50ch;
-
-           &::placeholder{
-         text-align: center;
-      }
-       }
+        justify-self: center;
+        
+        & .recherche__input{
+            width: 50ch;
+            
+            &::placeholder{
+                text-align: center;
+            }
+        }
     }
     
     &__contact{
@@ -76,9 +70,9 @@
     
     &__coordonnes{
         color: #fff;
-
+        
         & a{
-           color:rgb(252, 5, 182); 
+            color:rgb(252, 5, 182); 
         }
         
         @media screen and (max-width: $point-rupture){
@@ -91,7 +85,6 @@
         
         & img{
             max-width: 30px;
-            padding: 3px;
             cursor: pointer; 
         }   
     }
@@ -107,4 +100,21 @@
         margin-right: auto;
         margin-left: auto;
     }
+    
+    &__image{
+        width: 100%;
+        height: 125px; 
+        object-fit: cover;
+        background-position: center;
+    }
+    
+}
+@keyframes animeVague{
+    0%{
+        transform: translateX(-400px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+      
 }

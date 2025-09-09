@@ -1,0 +1,38 @@
+.destination{
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+  max-width: 1200px;
+  &__titre{
+    margin-top: 60px;
+    
+  }
+  
+  &__list{
+    
+    background-color: #011218fc;
+    color: aliceblue;
+    border-radius: 3px;
+    
+    
+  }
+  & div{
+    padding: 5px 20px;
+    border: 1px solid black;
+    
+    
+  }
+  & a{
+    color: #fc05b6;
+  }
+  & h3{
+    cursor: pointer;
+    transition: transform 0.2s;
+    
+    &:hover {
+      transform: scale(1.02);
+      
+    }
+  }
+  
+}

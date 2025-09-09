@@ -1,0 +1,39 @@
+.erreur-404{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__contenu{
+        position: absolute;
+        padding: 1rem;
+        margin: auto;
+        top: 300px;
+        left: 100px;
+        right: 100px;
+        max-width: 80ch;
+    }
+    
+    &__titre{
+        background-color: rgba(255, 255, 255, 0.201);
+        color: rgb(228, 183, 20);
+        text-align: center;
+    }
+    &__message{
+        color: rgb(228, 183, 20);
+        max-width: 80ch;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.201);
+
+    }
+    &__bouton{
+        color: rgb(0, 187, 255);
+        cursor: pointer;
+    }
+    &__recherche{
+        color: rgb(228, 183, 20);
+    }
+    &__image{
+        background-size: cover;
+    }
+}

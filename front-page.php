@@ -7,43 +7,29 @@
 
 <?php get_header(); ?>
 <!-- section hero -->
- <!-- A faire avec une boucle -->
- 
- 
- 
- <section class="hero"> 
-   <?php 
-  $hero_background[0] = get_theme_mod("hero_background_0");
-  $hero_background[1] = get_theme_mod("hero_background_1");
-  $hero_background[2] = get_theme_mod("hero_background_2");
-  $hero_background[3] = get_theme_mod("hero_background_3");
-  ?>
-  <div class="carrousel" style="background-image: url('<?= $hero_background[0] ?>'); opacity:1"></div>
-  <div class="carrousel" style="background-image: url('<?= $hero_background[1]?>'); opacity:0"></div>
-  <div class="carrousel" style="background-image: url('<?= $hero_background[2] ?>'); opacity:0"></div>
-  <div class="carrousel" style="background-image: url('<?= $hero_background[3] ?>'); opacity:0"></div>
 
-<form class="carrousel__form">
-  <input type="radio" class="carrousel__radio" name="carrousel__radio">
-  <input type="radio" class="carrousel__radio" name="carrousel__radio">
-  <input type="radio" class="carrousel__radio" name="carrousel__radio">
-</form>
- <?php get_template_part("gabarit/hero"); ?> 
-  </section>
-
-  <!-- section infolettre -->
-  <section class="infolettre">
-    <?php get_template_part("gabarit/infolettre"); ?>
-  </section>
+<section class="hero">
+   <?php get_template_part("gabarit/carrousel"); ?>
+   <?php get_template_part("gabarit/hero"); ?>
+</section>
 
   <!-- section populaire -->
   <section class="populaire"> 
     <?php get_template_part("gabarit/populaire"); ?>
   </section>
+
+  <?php  $vague_couleur = "#0d5e52ff";?>
+  <?php vague("#f9f7f4", $vague_couleur); ?>
   
-<!-- section destination -->
+  <!-- section rest-api-->
   <section class="destination">
+    <?php extraire_list_categories("destination");?>
     <h2 class="destination__titre">Articles de la catégorie</h2>
     <div class="destination__list"></div>
   </section>
-<?php get_footer(); ?>
+
+  <!-- section infolettre -->
+  <section class="infolettre" id="inscription">
+    <?php get_template_part("gabarit/infolettre"); ?>
+  </section>
+  <?php get_footer(); ?>

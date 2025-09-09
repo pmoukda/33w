@@ -13,6 +13,11 @@
     border: 1px solid #aaa;
     border-radius: 5px;
     position: relative;
+    transition: transform 0.2s;
+ 
+   &:hover {
+    transform: scale(1.02);
+   }
   }
   &__appreciation{
     position: absolute;
@@ -32,6 +37,7 @@
   &__lien a{
       color: rgb(252, 5, 182);
       padding-left: 10px;
+     
   }
   & .post-categories{
     list-style: none;

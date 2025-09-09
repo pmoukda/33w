@@ -1,10 +1,8 @@
-# TP2 - Site de voyage
+# TP2 - Site de voyage (Club Voyage Paradise)
 
-### Deuxième étape du développement d'un thème WP: Intégrer le Customizer wordPress
+### Epreuve final , créer la page erreur 404 d'un thème WP: Rest API  wordPress
 
 #### Auteur : Moukda Phaengvixay
-
-#### Adresse de la github-page
 
 #### Adresse du site distant sur WHC
 https://gftnth00.mywhc.ca/33we_19/

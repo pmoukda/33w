@@ -30,7 +30,7 @@ function theme_31w_customize_register($wp_customize) {
     /////////////////////////// Adresse 
     // configuration du champ
     $wp_customize->add_setting('hero_adresse', array(
-        'default' => __('233, rue Sherbrook, Montéal, Qc', 'theme_31w'),
+        'default' => __('233, rue Sherbrook, Montréal, Qc', 'theme_31w'),
         'sanitize_callback' => 'sanitize_text_field'
     ));
     //  configuration du contrôleur
@@ -40,55 +40,42 @@ function theme_31w_customize_register($wp_customize) {
         'type' => 'text',
     ));
     
-    
-    ////////////////////// Image 0
+////////////////////////////// Nombres images
     /*créer le champ */
-    $wp_customize->add_setting('hero_background_0', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
+     $wp_customize->add_setting('nombre_images_carrousel', array(
+        'default' => __(3, 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
     ));
-    /* créer le contrôleur*/ 
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background _0', array(
-        'label' => __('Image héro en arrière-plan', 'theme_31w'),
+    //  configuration du contrôleur
+    $wp_customize->add_control('nombre_images_carrousel', array(
+        'label' => __('nombre images', 'theme_31w'),
         'section' => 'hero_section',
-    )));
-    
-    ///////////////////////// Image 1
-    /*créer le champ */
-    $wp_customize->add_setting('hero_background_1', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
+        'type' => 'number',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 5,
+        ),
     ));
-    /* créer le contrôleur*/ 
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_1', array(
-        'label' => __('Image héro en arrière-plan', 'theme_31w'),
-        'section' => 'hero_section',
-    )));
+   
     
-    ///////////////////////// Image 2
-    /*créer le champ */
-    $wp_customize->add_setting('hero_background_2', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    /* créer le contrôleur*/ 
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_2', array(
-        'label' => __('Image héro en arrière-plan', 'theme_31w'),
-        'section' => 'hero_section',
-    )));
-    ///////////////////////// Image 3
-    /*créer le champ */
-    $wp_customize->add_setting('hero_background_3', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    /* créer le contrôleur*/ 
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_3', array(
-        'label' => __('Image héro en arrière-plan', 'theme_31w'),
-        'section' => 'hero_section',
-    )));
-    
-    
+   // Boucle pour traverser le nombre d'images 
+  $max_slides = 10;
+
+    for ($i = 0; $i < $max_slides; $i++) {
+        $setting_id = "hero_background_$i";
+
+        $wp_customize->add_setting($setting_id, array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, $setting_id, array(
+            'label'    => __("Image arrière-plan #$i", 'theme_31w'),
+            'section'  => 'hero_section',
+            'settings' => $setting_id,
+        )));
+    }
+
     
     ///////////////////////// Couleur du texte dans section hero
     ///////////////////////// champ couleur
@@ -102,15 +89,203 @@ function theme_31w_customize_register($wp_customize) {
         'label' => __('Couleur du texte', 'theme_31w'),
         'section' => 'hero_section',
     )));
+
     
-    
-    
-    ////////////////////////////// Ajout du panneau du pied de page
+
+
+    ////////////////////////////// Ajout du panneau du pied de page ////////////////////////////////////////////////////////////////////////
     /* créer le contrôleur*/
     $wp_customize->add_section('footer_section', array(
         'title' => __(' Section pied de page ', 'theme_31w'),
         'priority' => 30,
     ));
+
+    ///////image dans le piedpage
+    $wp_customize->add_setting('footer_background_0', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_background_0', array(
+        'label' => __('Footer Background Image', 'theme_31w'),
+        'section' => 'footer_section',
+    )));
+
+
+    ////////////////////////////// Adresse
+    /*créer le champ */
+     $wp_customize->add_setting('footer_adresse', array(
+        'default' => __('233, rue Sherbrook, Montréal, Qc', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('footer_adresse', array(
+        'label' => __('Adresse', 'theme_31w'),
+        'section' => 'footer_section',
+        'type' => 'text',
+    ));
+
+
+    ////////////////////////////// Téléphone
+    /*créer le champ */
+  $wp_customize->add_setting('footer_telephone', array(
+        'default' => __('514-573-2356', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('footer_telephone', array(
+        'label' => __('Téléphone', 'theme_31w'),
+        'section' => 'footer_section',
+        'type' => 'text',
+    ));
+
+
+    ///////////////////// Courriel
+  $wp_customize->add_setting('footer_courriel', array(
+        'default' => __('paradis@voyage.com', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('footer_courriel', array(
+        'label' => __('Courriel', 'theme_31w'),
+        'section' => 'footer_section',
+        'type' => 'text',
+    ));
+
+    ///////////////////// droit Auteur
+  $wp_customize->add_setting('footer_droit_auteur', array(
+        'default' => __('Moukda Phaengvixay &copy 2025. Tous droits réservés', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('footer_droit_auteur', array(
+        'label' => __('Droit auteur', 'theme_31w'),
+        'section' => 'footer_section',
+        'type' => 'text',
+    ));
+
+
+
+
+     ////////////////////////////// Ajout du panneau dans single page
+    /* créer le contrôleur*/
+    $wp_customize->add_section('categorie_section', array(
+        'title' => __(' Section categorie', 'theme_31w'),
+        'priority' => 30,
+    ));
+
+
+    ////////////////////////////// Auteur
+    /*créer le champ */
+     $wp_customize->add_setting('categorie_auteur', array(
+        'default' => __('Moukda Phaengvixay', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('categorie_auteur', array(
+        'label' => __('Auteur', 'theme_31w'),
+        'section' => 'categorie_section',
+        'type' => 'text',
+    ));
+
+    ////////////////////////////// date
+    /*créer le champ */
+     $wp_customize->add_setting('categorie_date', array(
+        'default' => __('2025-08-21', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('categorie_date', array(
+        'label' => __('Date', 'theme_31w'),
+        'section' => 'categorie_section',
+        'type' => 'date',
+    ));
+
+
+    ///////////////////////////////////section erreur 404 ////////////////////////////////////
+
+     /* créer le contrôleur*/
+    $wp_customize->add_section('404_section', array(
+        'title' => __(' Section erreur 404 ', 'theme_31w'),
+        'priority' => 30,
+    ));
+
+    ///////image dans le piedpage
+    $wp_customize->add_setting('404_image_background', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '404_image_background', array(
+        'label' => __('404 Image Background ', 'theme_31w'),
+        'section' => '404_section',
+    )));
+
+
+    ////////////////////////////// titre
+    /*créer le champ */
+     $wp_customize->add_setting('404_titre', array(
+        'default' => __("Oops, vous avez échoué sur l'île 404 !", 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('404_titre', array(
+        'label' => __('Titre', 'theme_31w'),
+        'section' => '404_section',
+        'type' => 'text',
+    ));
+
+
+    ////////////////////////////// Message
+    /*créer le champ */
+  $wp_customize->add_setting('404_message', array(
+        'default' => __("Pas de panique, cher membre explorateur ! Vous avez dérivé un peu trop loin des destinations de rêve que notre club a soigneusement sélectionnées pour vous. Reprenez votre périple en cliquant sur 'Accueil' pour découvrir à nouveau nos voyages d’exception !", 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    //  configuration du contrôleur
+    $wp_customize->add_control('404_message', array(
+        'label' => __('Message', 'theme_31w'),
+        'section' => '404_section',
+        'type' => 'text',
+    ));
+
+    //////////////////////////// bouton 
+    $wp_customize->add_setting('404_bouton', array(
+        'default' => __("Retour à l'accueil", 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('404_bouton', array(
+        'label' => __('Texte du bouton', 'theme_31w'),
+        'section' => '404_section',
+        'type' => 'text',
+    ));
+
+        ///////////////////////// Couleur du bouton
+    ///////////////////////// champ couleur
+    /*créer le champ */
+    $wp_customize->add_setting('404_couleur_bouton', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_couleur_bouton', array(
+        'label' => __('Couleur de bouton', 'theme_31w'),
+        'section' => '404_section',
+    )));
+
+        ///////////////////////// Couleur zone de recherche
+    ///////////////////////// champ couleur
+    /*créer le champ */
+    $wp_customize->add_setting('404_couleur_zone_recherche', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_couleur_zone_recherche', array(
+        'label' => __('Couleur du zone de recherche', 'theme_31w'),
+        'section' => '404_section',
+    )));
 }
 
 add_action('customize_register', 'theme_31w_customize_register');
